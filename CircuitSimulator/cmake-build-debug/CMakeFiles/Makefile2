@@ -54,10 +54,10 @@ RM = /home/itachi/Downloads/clion-2017.2.2/bin/cmake/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/CircuitSimulator
+CMAKE_SOURCE_DIR = /home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/CircuitSimulator
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/CircuitSimulator/cmake-build-debug
+CMAKE_BINARY_DIR = /home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/CircuitSimulator/cmake-build-debug
 
 #=============================================================================
 # Target rules for target CMakeFiles/CircuitSimulator.dir
@@ -66,7 +66,7 @@ CMAKE_BINARY_DIR = /home/itachi/repositories/gatech/fall_2017/ece6140_dst/github
 CMakeFiles/CircuitSimulator.dir/all:
 	$(MAKE) -f CMakeFiles/CircuitSimulator.dir/build.make CMakeFiles/CircuitSimulator.dir/depend
 	$(MAKE) -f CMakeFiles/CircuitSimulator.dir/build.make CMakeFiles/CircuitSimulator.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/CircuitSimulator/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5 "Built target CircuitSimulator"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/CircuitSimulator/cmake-build-debug/CMakeFiles --progress-num=1,2,3,4,5 "Built target CircuitSimulator"
 .PHONY : CMakeFiles/CircuitSimulator.dir/all
 
 # Include target in all.
@@ -76,9 +76,9 @@ all: CMakeFiles/CircuitSimulator.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/CircuitSimulator.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/CircuitSimulator/cmake-build-debug/CMakeFiles 5
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/CircuitSimulator/cmake-build-debug/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/CircuitSimulator.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/CircuitSimulator/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/CircuitSimulator/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/CircuitSimulator.dir/rule
 
 # Convenience name for target.
