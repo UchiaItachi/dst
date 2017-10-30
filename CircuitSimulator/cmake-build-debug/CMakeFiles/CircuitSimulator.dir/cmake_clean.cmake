@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/CircuitSimulator.dir/main.cpp.o"
   "CMakeFiles/CircuitSimulator.dir/CircuitSimulator.cpp.o"
-  "CMakeFiles/CircuitSimulator.dir/ParseInput.cpp.o"
-  "CMakeFiles/CircuitSimulator.dir/Tests.cpp.o"
+  "CMakeFiles/CircuitSimulator.dir/CircuitParser.cpp.o"
+  "CMakeFiles/CircuitSimulator.dir/TestParser.cpp.o"
   "CircuitSimulator.pdb"
   "CircuitSimulator"
 )

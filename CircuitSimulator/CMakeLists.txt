@@ -3,5 +3,5 @@ project(CircuitSimulator)
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(SOURCE_FILES main.cpp CircuitSimulator.h CircuitSimulator.cpp Gate.h GateBase.h GateType.h ParseInput.h ParsedGateInfo.h ParseInput.cpp Tests.cpp Tests.h)
+set(SOURCE_FILES main.cpp CircuitSimulator.h CircuitSimulator.cpp Gate.h GateBase.h GateType.h CircuitParser.h ParsedGateInfo.h CircuitParser.cpp TestParserInfo.h TestParser.h TestParser.cpp)
 add_executable(CircuitSimulator ${SOURCE_FILES})

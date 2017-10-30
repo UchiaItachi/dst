@@ -84,6 +84,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/CircuitSimulator/CircuitParser.cpp">
+			<Option target="CircuitSimulator"/>
+		</Unit>
+		<Unit filename="/home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/CircuitSimulator/CircuitParser.h">
+			<Option target="CircuitSimulator"/>
+		</Unit>
 		<Unit filename="/home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/CircuitSimulator/CircuitSimulator.cpp">
 			<Option target="CircuitSimulator"/>
 		</Unit>
@@ -99,19 +105,16 @@
 		<Unit filename="/home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/CircuitSimulator/GateType.h">
 			<Option target="CircuitSimulator"/>
 		</Unit>
-		<Unit filename="/home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/CircuitSimulator/ParseInput.cpp">
-			<Option target="CircuitSimulator"/>
-		</Unit>
-		<Unit filename="/home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/CircuitSimulator/ParseInput.h">
-			<Option target="CircuitSimulator"/>
-		</Unit>
 		<Unit filename="/home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/CircuitSimulator/ParsedGateInfo.h">
 			<Option target="CircuitSimulator"/>
 		</Unit>
-		<Unit filename="/home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/CircuitSimulator/Tests.cpp">
+		<Unit filename="/home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/CircuitSimulator/TestParser.cpp">
 			<Option target="CircuitSimulator"/>
 		</Unit>
-		<Unit filename="/home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/CircuitSimulator/Tests.h">
+		<Unit filename="/home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/CircuitSimulator/TestParser.h">
+			<Option target="CircuitSimulator"/>
+		</Unit>
+		<Unit filename="/home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/CircuitSimulator/TestParserInfo.h">
 			<Option target="CircuitSimulator"/>
 		</Unit>
 		<Unit filename="/home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/CircuitSimulator/main.cpp">

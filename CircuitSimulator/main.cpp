@@ -1,20 +1,27 @@
 #include <iostream>
 
-#include "ParseInput.h"
+#include "CircuitParser.h"
 #include "CircuitSimulator.h"
-#include "Tests.h"
+#include "TestParserInfo.h"
+
+#include "TestParser.h"
 
 int main(int argc, char* argv[])
 {
 
-  Tests tests;
-  tests.setUp();
+  if (argc <= 1)
+  {
+    std::cout << "Error: Please pass the test file containing a list of circuit file & circuit input files per line" << std::endl;
+    return -1;
+  }
+  std::string testFile(argv[1]);
 
-  Circuits_t& circuits = tests.getCircuits();
+  TestParser testParser(testFile);
+  Circuits_t& circuits = testParser.getCircuits();
   for (auto& circuitInfo: circuits)
   {
     TestVectors_t& testVectors = circuitInfo.vectors_;
-    ParseInput parser(circuitInfo.circuitFile);
+    CircuitParser parser(circuitInfo.circuitFile);
     CircuitSimulator simulator;
 
     simulator.addPrimaryInputs(parser.getPrimaryInputs());
@@ -27,7 +34,7 @@ int main(int argc, char* argv[])
       testVector.output = simulator.simulate(parser.getInputNodeValues(testVector.input));
     }
   }
+  testParser.printSummary();
 
-  tests.printSummary();
   return 0;
 }

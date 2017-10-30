@@ -105,68 +105,68 @@ CMakeFiles/CircuitSimulator.dir/CircuitSimulator.cpp.o.provides: CMakeFiles/Circ
 CMakeFiles/CircuitSimulator.dir/CircuitSimulator.cpp.o.provides.build: CMakeFiles/CircuitSimulator.dir/CircuitSimulator.cpp.o
 
 
-CMakeFiles/CircuitSimulator.dir/ParseInput.cpp.o: CMakeFiles/CircuitSimulator.dir/flags.make
-CMakeFiles/CircuitSimulator.dir/ParseInput.cpp.o: ../ParseInput.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/CircuitSimulator/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/CircuitSimulator.dir/ParseInput.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CircuitSimulator.dir/ParseInput.cpp.o -c /home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/CircuitSimulator/ParseInput.cpp
+CMakeFiles/CircuitSimulator.dir/CircuitParser.cpp.o: CMakeFiles/CircuitSimulator.dir/flags.make
+CMakeFiles/CircuitSimulator.dir/CircuitParser.cpp.o: ../CircuitParser.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/CircuitSimulator/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/CircuitSimulator.dir/CircuitParser.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CircuitSimulator.dir/CircuitParser.cpp.o -c /home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/CircuitSimulator/CircuitParser.cpp
 
-CMakeFiles/CircuitSimulator.dir/ParseInput.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CircuitSimulator.dir/ParseInput.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/CircuitSimulator/ParseInput.cpp > CMakeFiles/CircuitSimulator.dir/ParseInput.cpp.i
+CMakeFiles/CircuitSimulator.dir/CircuitParser.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CircuitSimulator.dir/CircuitParser.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/CircuitSimulator/CircuitParser.cpp > CMakeFiles/CircuitSimulator.dir/CircuitParser.cpp.i
 
-CMakeFiles/CircuitSimulator.dir/ParseInput.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CircuitSimulator.dir/ParseInput.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/CircuitSimulator/ParseInput.cpp -o CMakeFiles/CircuitSimulator.dir/ParseInput.cpp.s
+CMakeFiles/CircuitSimulator.dir/CircuitParser.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CircuitSimulator.dir/CircuitParser.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/CircuitSimulator/CircuitParser.cpp -o CMakeFiles/CircuitSimulator.dir/CircuitParser.cpp.s
 
-CMakeFiles/CircuitSimulator.dir/ParseInput.cpp.o.requires:
+CMakeFiles/CircuitSimulator.dir/CircuitParser.cpp.o.requires:
 
-.PHONY : CMakeFiles/CircuitSimulator.dir/ParseInput.cpp.o.requires
+.PHONY : CMakeFiles/CircuitSimulator.dir/CircuitParser.cpp.o.requires
 
-CMakeFiles/CircuitSimulator.dir/ParseInput.cpp.o.provides: CMakeFiles/CircuitSimulator.dir/ParseInput.cpp.o.requires
-	$(MAKE) -f CMakeFiles/CircuitSimulator.dir/build.make CMakeFiles/CircuitSimulator.dir/ParseInput.cpp.o.provides.build
-.PHONY : CMakeFiles/CircuitSimulator.dir/ParseInput.cpp.o.provides
+CMakeFiles/CircuitSimulator.dir/CircuitParser.cpp.o.provides: CMakeFiles/CircuitSimulator.dir/CircuitParser.cpp.o.requires
+	$(MAKE) -f CMakeFiles/CircuitSimulator.dir/build.make CMakeFiles/CircuitSimulator.dir/CircuitParser.cpp.o.provides.build
+.PHONY : CMakeFiles/CircuitSimulator.dir/CircuitParser.cpp.o.provides
 
-CMakeFiles/CircuitSimulator.dir/ParseInput.cpp.o.provides.build: CMakeFiles/CircuitSimulator.dir/ParseInput.cpp.o
+CMakeFiles/CircuitSimulator.dir/CircuitParser.cpp.o.provides.build: CMakeFiles/CircuitSimulator.dir/CircuitParser.cpp.o
 
 
-CMakeFiles/CircuitSimulator.dir/Tests.cpp.o: CMakeFiles/CircuitSimulator.dir/flags.make
-CMakeFiles/CircuitSimulator.dir/Tests.cpp.o: ../Tests.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/CircuitSimulator/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/CircuitSimulator.dir/Tests.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CircuitSimulator.dir/Tests.cpp.o -c /home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/CircuitSimulator/Tests.cpp
+CMakeFiles/CircuitSimulator.dir/TestParser.cpp.o: CMakeFiles/CircuitSimulator.dir/flags.make
+CMakeFiles/CircuitSimulator.dir/TestParser.cpp.o: ../TestParser.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/CircuitSimulator/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/CircuitSimulator.dir/TestParser.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/CircuitSimulator.dir/TestParser.cpp.o -c /home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/CircuitSimulator/TestParser.cpp
 
-CMakeFiles/CircuitSimulator.dir/Tests.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CircuitSimulator.dir/Tests.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/CircuitSimulator/Tests.cpp > CMakeFiles/CircuitSimulator.dir/Tests.cpp.i
+CMakeFiles/CircuitSimulator.dir/TestParser.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/CircuitSimulator.dir/TestParser.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/CircuitSimulator/TestParser.cpp > CMakeFiles/CircuitSimulator.dir/TestParser.cpp.i
 
-CMakeFiles/CircuitSimulator.dir/Tests.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CircuitSimulator.dir/Tests.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/CircuitSimulator/Tests.cpp -o CMakeFiles/CircuitSimulator.dir/Tests.cpp.s
+CMakeFiles/CircuitSimulator.dir/TestParser.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/CircuitSimulator.dir/TestParser.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/CircuitSimulator/TestParser.cpp -o CMakeFiles/CircuitSimulator.dir/TestParser.cpp.s
 
-CMakeFiles/CircuitSimulator.dir/Tests.cpp.o.requires:
+CMakeFiles/CircuitSimulator.dir/TestParser.cpp.o.requires:
 
-.PHONY : CMakeFiles/CircuitSimulator.dir/Tests.cpp.o.requires
+.PHONY : CMakeFiles/CircuitSimulator.dir/TestParser.cpp.o.requires
 
-CMakeFiles/CircuitSimulator.dir/Tests.cpp.o.provides: CMakeFiles/CircuitSimulator.dir/Tests.cpp.o.requires
-	$(MAKE) -f CMakeFiles/CircuitSimulator.dir/build.make CMakeFiles/CircuitSimulator.dir/Tests.cpp.o.provides.build
-.PHONY : CMakeFiles/CircuitSimulator.dir/Tests.cpp.o.provides
+CMakeFiles/CircuitSimulator.dir/TestParser.cpp.o.provides: CMakeFiles/CircuitSimulator.dir/TestParser.cpp.o.requires
+	$(MAKE) -f CMakeFiles/CircuitSimulator.dir/build.make CMakeFiles/CircuitSimulator.dir/TestParser.cpp.o.provides.build
+.PHONY : CMakeFiles/CircuitSimulator.dir/TestParser.cpp.o.provides
 
-CMakeFiles/CircuitSimulator.dir/Tests.cpp.o.provides.build: CMakeFiles/CircuitSimulator.dir/Tests.cpp.o
+CMakeFiles/CircuitSimulator.dir/TestParser.cpp.o.provides.build: CMakeFiles/CircuitSimulator.dir/TestParser.cpp.o
 
 
 # Object files for target CircuitSimulator
 CircuitSimulator_OBJECTS = \
 "CMakeFiles/CircuitSimulator.dir/main.cpp.o" \
 "CMakeFiles/CircuitSimulator.dir/CircuitSimulator.cpp.o" \
-"CMakeFiles/CircuitSimulator.dir/ParseInput.cpp.o" \
-"CMakeFiles/CircuitSimulator.dir/Tests.cpp.o"
+"CMakeFiles/CircuitSimulator.dir/CircuitParser.cpp.o" \
+"CMakeFiles/CircuitSimulator.dir/TestParser.cpp.o"
 
 # External object files for target CircuitSimulator
 CircuitSimulator_EXTERNAL_OBJECTS =
 
 CircuitSimulator: CMakeFiles/CircuitSimulator.dir/main.cpp.o
 CircuitSimulator: CMakeFiles/CircuitSimulator.dir/CircuitSimulator.cpp.o
-CircuitSimulator: CMakeFiles/CircuitSimulator.dir/ParseInput.cpp.o
-CircuitSimulator: CMakeFiles/CircuitSimulator.dir/Tests.cpp.o
+CircuitSimulator: CMakeFiles/CircuitSimulator.dir/CircuitParser.cpp.o
+CircuitSimulator: CMakeFiles/CircuitSimulator.dir/TestParser.cpp.o
 CircuitSimulator: CMakeFiles/CircuitSimulator.dir/build.make
 CircuitSimulator: CMakeFiles/CircuitSimulator.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/CircuitSimulator/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable CircuitSimulator"
@@ -179,8 +179,8 @@ CMakeFiles/CircuitSimulator.dir/build: CircuitSimulator
 
 CMakeFiles/CircuitSimulator.dir/requires: CMakeFiles/CircuitSimulator.dir/main.cpp.o.requires
 CMakeFiles/CircuitSimulator.dir/requires: CMakeFiles/CircuitSimulator.dir/CircuitSimulator.cpp.o.requires
-CMakeFiles/CircuitSimulator.dir/requires: CMakeFiles/CircuitSimulator.dir/ParseInput.cpp.o.requires
-CMakeFiles/CircuitSimulator.dir/requires: CMakeFiles/CircuitSimulator.dir/Tests.cpp.o.requires
+CMakeFiles/CircuitSimulator.dir/requires: CMakeFiles/CircuitSimulator.dir/CircuitParser.cpp.o.requires
+CMakeFiles/CircuitSimulator.dir/requires: CMakeFiles/CircuitSimulator.dir/TestParser.cpp.o.requires
 
 .PHONY : CMakeFiles/CircuitSimulator.dir/requires
 

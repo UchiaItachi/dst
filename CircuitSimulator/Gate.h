@@ -5,6 +5,7 @@ struct ParsedGateInfo;
 class Gate
 {
 public:
+  virtual ~Gate() {}
   virtual bool getOutput() = 0;
   virtual ParsedGateInfo& getInfo() = 0;
 

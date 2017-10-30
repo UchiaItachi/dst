@@ -1,0 +1,12 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$classGate.html" title="Gate" alt="" coords="5,183,56,209"/>
+<area shape="rect" id="node2" href="$classGateBase.html" title="GateBase" alt="" coords="104,183,184,209"/>
+<area shape="rect" id="node3" href="$classAndGate.html" title="AndGate" alt="" coords="236,5,309,32"/>
+<area shape="rect" id="node4" href="$classBufGate.html" title="BufGate" alt="" coords="237,56,308,83"/>
+<area shape="rect" id="node5" href="$classNandGate.html" title="NandGate" alt="" coords="232,107,313,133"/>
+<area shape="rect" id="node6" href="$classNorGate.html" title="NorGate" alt="" coords="237,157,308,184"/>
+<area shape="rect" id="node7" href="$classNotGate.html" title="NotGate" alt="" coords="237,208,308,235"/>
+<area shape="rect" id="node8" href="$classOrGate.html" title="OrGate" alt="" coords="241,259,305,285"/>
+<area shape="rect" id="node9" href="$classXnorGate.html" title="XnorGate" alt="" coords="234,309,311,336"/>
+<area shape="rect" id="node10" href="$classXorGate.html" title="XorGate" alt="" coords="237,360,308,387"/>
+</map>

@@ -13,11 +13,11 @@ public:
   GateBase(ParsedGateInfo gi)
     : gateInfo_(gi)
     , outputAvailable_(false)
-    , input1Gate_(nullptr)
-    , input2Gate_(nullptr)
     , input1Value_(false)
     , input2Value_(false)
     , outputValue_(false)
+    , input1Gate_(nullptr)
+    , input2Gate_(nullptr)
   {
   }
 

@@ -6,6 +6,28 @@
 
 #IncludeRegexTransform: 
 
+/home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/CircuitSimulator/CircuitParser.cpp
+CircuitParser.h
+/home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/CircuitSimulator/CircuitParser.h
+iostream
+-
+sstream
+-
+cstdlib
+-
+
+/home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/CircuitSimulator/CircuitParser.h
+ParsedGateInfo.h
+/home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/CircuitSimulator/ParsedGateInfo.h
+vector
+-
+string
+-
+fstream
+-
+regex
+-
+
 /home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/CircuitSimulator/CircuitSimulator.cpp
 CircuitSimulator.h
 /home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/CircuitSimulator/CircuitSimulator.h
@@ -40,26 +62,6 @@ map
 string
 -
 
-/home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/CircuitSimulator/ParseInput.cpp
-ParseInput.h
-/home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/CircuitSimulator/ParseInput.h
-sstream
--
-cstdlib
--
-
-/home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/CircuitSimulator/ParseInput.h
-ParsedGateInfo.h
-/home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/CircuitSimulator/ParsedGateInfo.h
-vector
--
-string
--
-fstream
--
-regex
--
-
 /home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/CircuitSimulator/ParsedGateInfo.h
 GateType.h
 /home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/CircuitSimulator/GateType.h
@@ -70,15 +72,23 @@ vector
 map
 -
 
-/home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/CircuitSimulator/Tests.cpp
-Tests.h
-/home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/CircuitSimulator/Tests.h
-iostream
--
+/home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/CircuitSimulator/TestParser.cpp
+TestParser.h
+/home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/CircuitSimulator/TestParser.h
 fstream
 -
+iostream
+-
 
-/home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/CircuitSimulator/Tests.h
+/home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/CircuitSimulator/TestParser.h
+TestParserInfo.h
+/home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/CircuitSimulator/TestParserInfo.h
+regex
+-
+string
+-
+
+/home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/CircuitSimulator/TestParserInfo.h
 string
 -
 vector
@@ -87,10 +97,12 @@ vector
 /home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/CircuitSimulator/main.cpp
 iostream
 -
-ParseInput.h
-/home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/CircuitSimulator/ParseInput.h
+CircuitParser.h
+/home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/CircuitSimulator/CircuitParser.h
 CircuitSimulator.h
 /home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/CircuitSimulator/CircuitSimulator.h
-Tests.h
-/home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/CircuitSimulator/Tests.h
+TestParserInfo.h
+/home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/CircuitSimulator/TestParserInfo.h
+TestParser.h
+/home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/CircuitSimulator/TestParser.h
 

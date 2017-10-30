@@ -123,6 +123,33 @@ CircuitSimulator/fast:
 	$(MAKE) -f CMakeFiles/CircuitSimulator.dir/build.make CMakeFiles/CircuitSimulator.dir/build
 .PHONY : CircuitSimulator/fast
 
+CircuitParser.o: CircuitParser.cpp.o
+
+.PHONY : CircuitParser.o
+
+# target to build an object file
+CircuitParser.cpp.o:
+	$(MAKE) -f CMakeFiles/CircuitSimulator.dir/build.make CMakeFiles/CircuitSimulator.dir/CircuitParser.cpp.o
+.PHONY : CircuitParser.cpp.o
+
+CircuitParser.i: CircuitParser.cpp.i
+
+.PHONY : CircuitParser.i
+
+# target to preprocess a source file
+CircuitParser.cpp.i:
+	$(MAKE) -f CMakeFiles/CircuitSimulator.dir/build.make CMakeFiles/CircuitSimulator.dir/CircuitParser.cpp.i
+.PHONY : CircuitParser.cpp.i
+
+CircuitParser.s: CircuitParser.cpp.s
+
+.PHONY : CircuitParser.s
+
+# target to generate assembly for a file
+CircuitParser.cpp.s:
+	$(MAKE) -f CMakeFiles/CircuitSimulator.dir/build.make CMakeFiles/CircuitSimulator.dir/CircuitParser.cpp.s
+.PHONY : CircuitParser.cpp.s
+
 CircuitSimulator.o: CircuitSimulator.cpp.o
 
 .PHONY : CircuitSimulator.o
@@ -150,59 +177,32 @@ CircuitSimulator.cpp.s:
 	$(MAKE) -f CMakeFiles/CircuitSimulator.dir/build.make CMakeFiles/CircuitSimulator.dir/CircuitSimulator.cpp.s
 .PHONY : CircuitSimulator.cpp.s
 
-ParseInput.o: ParseInput.cpp.o
+TestParser.o: TestParser.cpp.o
 
-.PHONY : ParseInput.o
-
-# target to build an object file
-ParseInput.cpp.o:
-	$(MAKE) -f CMakeFiles/CircuitSimulator.dir/build.make CMakeFiles/CircuitSimulator.dir/ParseInput.cpp.o
-.PHONY : ParseInput.cpp.o
-
-ParseInput.i: ParseInput.cpp.i
-
-.PHONY : ParseInput.i
-
-# target to preprocess a source file
-ParseInput.cpp.i:
-	$(MAKE) -f CMakeFiles/CircuitSimulator.dir/build.make CMakeFiles/CircuitSimulator.dir/ParseInput.cpp.i
-.PHONY : ParseInput.cpp.i
-
-ParseInput.s: ParseInput.cpp.s
-
-.PHONY : ParseInput.s
-
-# target to generate assembly for a file
-ParseInput.cpp.s:
-	$(MAKE) -f CMakeFiles/CircuitSimulator.dir/build.make CMakeFiles/CircuitSimulator.dir/ParseInput.cpp.s
-.PHONY : ParseInput.cpp.s
-
-Tests.o: Tests.cpp.o
-
-.PHONY : Tests.o
+.PHONY : TestParser.o
 
 # target to build an object file
-Tests.cpp.o:
-	$(MAKE) -f CMakeFiles/CircuitSimulator.dir/build.make CMakeFiles/CircuitSimulator.dir/Tests.cpp.o
-.PHONY : Tests.cpp.o
+TestParser.cpp.o:
+	$(MAKE) -f CMakeFiles/CircuitSimulator.dir/build.make CMakeFiles/CircuitSimulator.dir/TestParser.cpp.o
+.PHONY : TestParser.cpp.o
 
-Tests.i: Tests.cpp.i
+TestParser.i: TestParser.cpp.i
 
-.PHONY : Tests.i
+.PHONY : TestParser.i
 
 # target to preprocess a source file
-Tests.cpp.i:
-	$(MAKE) -f CMakeFiles/CircuitSimulator.dir/build.make CMakeFiles/CircuitSimulator.dir/Tests.cpp.i
-.PHONY : Tests.cpp.i
+TestParser.cpp.i:
+	$(MAKE) -f CMakeFiles/CircuitSimulator.dir/build.make CMakeFiles/CircuitSimulator.dir/TestParser.cpp.i
+.PHONY : TestParser.cpp.i
 
-Tests.s: Tests.cpp.s
+TestParser.s: TestParser.cpp.s
 
-.PHONY : Tests.s
+.PHONY : TestParser.s
 
 # target to generate assembly for a file
-Tests.cpp.s:
-	$(MAKE) -f CMakeFiles/CircuitSimulator.dir/build.make CMakeFiles/CircuitSimulator.dir/Tests.cpp.s
-.PHONY : Tests.cpp.s
+TestParser.cpp.s:
+	$(MAKE) -f CMakeFiles/CircuitSimulator.dir/build.make CMakeFiles/CircuitSimulator.dir/TestParser.cpp.s
+.PHONY : TestParser.cpp.s
 
 main.o: main.cpp.o
 
@@ -240,15 +240,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... CircuitSimulator"
+	@echo "... CircuitParser.o"
+	@echo "... CircuitParser.i"
+	@echo "... CircuitParser.s"
 	@echo "... CircuitSimulator.o"
 	@echo "... CircuitSimulator.i"
 	@echo "... CircuitSimulator.s"
-	@echo "... ParseInput.o"
-	@echo "... ParseInput.i"
-	@echo "... ParseInput.s"
-	@echo "... Tests.o"
-	@echo "... Tests.i"
-	@echo "... Tests.s"
+	@echo "... TestParser.o"
+	@echo "... TestParser.i"
+	@echo "... TestParser.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
