@@ -1,0 +1,38 @@
+File Descritpions:
+------------------
+
+tests.txt
+---------
+. This file is used as an input to the CircuitSimulator (can be named differently too, passed as the first argument to executable, mandatory argument)
+. Every entry in this file contains a pair of files name (comma separated)
+. <netlist_file> -> File name of the netlist
+. <test_input_vectors_file> -> file containing input test vectors for a circuit (each line in this file contains an input vector)
+. An example of the contents of tests.txt file shown below
+e.g.
+<netlist_file_1>, <test_input_vectors_file_1>
+<netlist_file_2>, <test_input_vectors_file_2>
+.. etc..
+
+
+Netlist Files:
+--------------
+. Files containing the netlist or the circuit (e.g. s27.txt)
+
+Input Test Vector file:
+----------------------
+. File containing input test "vectors" for a circuit (e.g. s27_input.txt)
+. Each line represent a test vector
+. Multiple test vectors given on each separate line
+
+
+Output Files:
+-------------
+. Output files of the circuit simulation are dumped into this file
+. It contains results for a circuit for all the test vectors applied to the circuit & simulated including the detected fault lists
+
+
+*** NOTE ***
+. It is mandatory that the netlist file and the test input vector files listed in "tests.txt" be in the same directory
+. Also the outputs results used for fault coverage are captured in two separate files, just for reference only
+  "FaultCoverageOutput_75.txt" & "FaultCoverageOutput_90.txt"
+  "FaultCoverage_Graph_75.png" & "FaultCoverage_Graph_90.png"

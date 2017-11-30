@@ -1,0 +1,4 @@
+Net 16 s-a-0
+Net 10 s-a-1
+Net 12 s-a-0
+Net 18 s-a-1

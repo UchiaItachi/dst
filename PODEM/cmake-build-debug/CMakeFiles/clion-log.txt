@@ -1,0 +1,4 @@
+/home/itachi/bin/clion-2017.2.3/bin/cmake/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/PODEM
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/PODEM/cmake-build-debug
