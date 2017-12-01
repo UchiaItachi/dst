@@ -12,6 +12,11 @@ Podem::Podem(DeductiveFaultSimulator& simulator)
 
 }
 
+void Podem::reset()
+{
+  inputsForObjective_.clear();
+}
+
 bool Podem::Podemize(NodeId_t faultyNode, bool stuckAtValue)
 {
   if (isErrorAtPrimaryOutput())
@@ -19,16 +24,16 @@ bool Podem::Podemize(NodeId_t faultyNode, bool stuckAtValue)
     return true;
   }
 
-  if (!xpathCheck(faultyNode))
+  if (!testPossible(faultyNode))
   {
     return false;
   }
 
   Objective_t objective = getObjective(faultyNode, stuckAtValue);
   PrimaryInputBacktrace_t piBackTrace = backtrace(std::get<0>(objective), std::get<1>(objective));
+
   BooleanValue implyValue = std::get<1>(piBackTrace) ? BooleanValue::_1 : BooleanValue::_0;
   NodeId_t piNode = std::get<0>(piBackTrace);
-
   imply(piNode, implyValue);
 
   if (Podemize(faultyNode, stuckAtValue))
@@ -80,7 +85,7 @@ bool Podem::isValueOfLAnX(NodeId_t faultyLine)
   }
   else
   {
-    return gate->getOutput() == BooleanValue::_X;
+    return gate->getOutputReval() == BooleanValue::_X;
   }
 
   return false;
@@ -104,6 +109,8 @@ Podem::Objective_t Podem::getObjective(NodeId_t faultyNode, bool stuckAtValue)
   {
     if (inputNodeValue == BooleanValue::_X)
     {
+      objective = std::make_tuple(inputNode, !cValue);
+      return true;
       auto& takenInputsOfGate = inputsForObjective_[dFrontierGate];
       auto posIt = std::find(takenInputsOfGate.begin(), takenInputsOfGate.end(), inputNode);
       if (posIt == takenInputsOfGate.end())
@@ -112,6 +119,7 @@ Podem::Objective_t Podem::getObjective(NodeId_t faultyNode, bool stuckAtValue)
         objective = std::make_tuple(inputNode, !cValue);
         return true;
       }
+      return true;
     }
     return false;
   };
@@ -196,27 +204,72 @@ void Podem::imply(Podem::PrimaryInput_t piNode, BooleanValue value)
     Gate* poGate = simulator_.getGate(poNode);
     poGate->getOutputReval();
   }
+  simulator_.evaluateDFrontier();
 }
 
-bool Podem::xpathCheck(NodeId_t faultyNode)
+bool Podem::testPossible(NodeId_t faultyNode)
 {
-  Gate* faultyGate = simulator_.getGate(faultyNode);
-  std::vector<Gate*>& fanoutGates = faultyGate->getOutputFanoutGates();
-  if (fanoutGates.empty())
+  if (simulator_.dFrontierGates_.empty())
+  {
+     return xpathCheck(faultyNode);
+  }
+
+  for (auto& dGate: simulator_.dFrontierGates_)
+  {
+    NodeId_t xpathCheckFromNode = ~0x0;
+
+    BooleanValue input1 = dGate->getInput1();
+    BooleanValue input2 = dGate->getInput2();
+
+    if ((input1 == BooleanValue::_D) || (input1 == BooleanValue::_D_Bar))
+    {
+      xpathCheckFromNode = dGate->getInfo().input1;
+    }
+    else if ((input2 == BooleanValue::_D) || (input2 == BooleanValue::_D_Bar))
+    {
+      xpathCheckFromNode = dGate->getInfo().input2;
+    }
+    else
+    {
+      throw std::exception();
+    }
+
+    if (xpathCheck(xpathCheckFromNode))
+    {
+      return true;
+    }
+  }
+  return false;
+}
+
+bool Podem::xpathCheck(NodeId_t checkFromNode)
+{
+  Gate* faultyGate = simulator_.getGate(checkFromNode);
+  std::vector<Gate*> fanoutGates;
+  if (faultyGate)
+  {
+    fanoutGates = faultyGate->getOutputFanoutGates();
+  }
+  else
+  {
+    fanoutGates = simulator_.getGatesWithPrimaryInputNode(checkFromNode);
+  }
+
+  if (fanoutGates.empty() && faultyGate)
   {
     NodeId_t oNode = faultyGate->getInfo().output;
     bool isPrimaryOutputNode = simulator_.isPrimaryOutput(oNode);
-    bool isOutputX = (BooleanValue::_X) == faultyGate->getOutput();
+    bool isOutputX = (BooleanValue::_X) == faultyGate->getOutputReval();
 
     return isOutputX && isPrimaryOutputNode;
   }
-  for (auto& gate: fanoutGates)
+  for (auto &gate: fanoutGates)
   {
-    const BooleanValue output = gate->getOutput();
+    const BooleanValue output = gate->getOutputReval();
     if (output == BooleanValue::_X)
     {
-      NodeId_t nextFaultyNode = gate->getInfo().output;
-      if(xpathCheck(nextFaultyNode))
+      NodeId_t nextCheckNode = gate->getInfo().output;
+      if (xpathCheck(nextCheckNode))
       {
         return true;
       }
@@ -230,7 +283,7 @@ bool Podem::isErrorAtPrimaryOutput()
   for (auto& outputNode: simulator_.outputs_)
   {
     Gate* poGate = simulator_.getGate(outputNode);
-    BooleanValue poValue = poGate->getOutput();
+    BooleanValue poValue = poGate->getOutputReval();
     if ((poValue == BooleanValue::_D) || (poValue == BooleanValue::_D_Bar))
     {
       return true;

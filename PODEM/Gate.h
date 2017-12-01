@@ -11,7 +11,6 @@ class Gate
 public:
   virtual ~Gate() {}
 
-  virtual BooleanValue getOutput() = 0;
   virtual BooleanValue getInput1() = 0;
   virtual BooleanValue getInput2() = 0;
   virtual bool getControllingValue() = 0;
@@ -31,6 +30,7 @@ public:
   virtual void setInput2Value(BooleanValue value) = 0;
 
   virtual void markAsPrimaryGate() = 0;
+  virtual void markAsFaultyGate(NodeId_t faultyNode, bool stuckAtValue) = 0;
   virtual bool isPrimaryGate() = 0;
   virtual bool isGateInDFrontier() = 0;
   virtual void addOutputFanOutGate(Gate* fanoutGate) = 0;

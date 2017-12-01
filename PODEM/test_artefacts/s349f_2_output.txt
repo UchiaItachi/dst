@@ -1,0 +1,12 @@
+Netlist File : /home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/PODEM/test_artefacts/s349f_2.txt
+Test Input File : /home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/PODEM/test_artefacts/s349f_2_input.txt
+
+Input : Net 25 s-a-1
+Generated Test Vector : XXXXXXXXXXXXXXX1XXXXXXXX 
+Input : Net 51 s-a-0
+Generated Test Vector : 00XXXXXXXXXXXXX0XXXXXXXX 
+Input : Net 105 s-a-1
+Generated Test Vector : 01X01XXXXX010XX0XXXXXXXX 
+Input : Net 7 s-a-0
+Generated Test Vector : XXXXXX1XXXXXXXXXXXXXXXXX 
+

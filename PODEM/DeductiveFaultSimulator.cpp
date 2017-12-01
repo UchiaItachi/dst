@@ -32,6 +32,8 @@ void DeductiveFaultSimulator::reset()
     Gate* gate = gi.second;
     gate->reset();
   }
+  dFrontierGates_.clear();
+  podem_.reset();
 }
 
 void DeductiveFaultSimulator::addGate(const ParsedGateInfo_t& gateInfo)
@@ -132,9 +134,24 @@ std::string DeductiveFaultSimulator::orchestratePodem(NodeId_t faultyNode, bool 
 {
   std::string circuitOutput = "";
   assignPrimaryInputs();
+
+  if (isGate(faultyNode))
+  {
+    Gate *faultyGate = getGate(faultyNode);
+    faultyGate->markAsFaultyGate(faultyNode, stuckAtValue);
+  }
+  else
+  {
+    GateList_t gates = getGatesWithPrimaryInputNode(faultyNode);
+    for (auto& gate: gates)
+    {
+      gate->markAsFaultyGate(faultyNode, stuckAtValue);
+    }
+  }
+
   if (podem_.Podemize(faultyNode, stuckAtValue))
   {
-    circuitOutput = getTestVector();
+    circuitOutput = getTestVector(faultyNode);
   }
   else
   {
@@ -258,7 +275,7 @@ void DeductiveFaultSimulator::evaluateDFrontier()
   }
 }
 
-std::string DeductiveFaultSimulator::getTestVector()
+std::string DeductiveFaultSimulator::getTestVector(NodeId_t faultyNode)
 {
   std::string testVector = "";
 
@@ -270,11 +287,31 @@ std::string DeductiveFaultSimulator::getTestVector()
 
     if (inputNode == info.input1)
     {
-      testVector += getBooleanValueString(gate->getInput1());
+      BooleanValue input1Value = gate->getInput1();
+      std::string s = getBooleanValueString(input1Value);
+      if ((inputNode == faultyNode) && (input1Value == BooleanValue::_D))
+      {
+        s = "1";
+      }
+      else if ((inputNode == faultyNode) && (input1Value == BooleanValue::_D_Bar))
+      {
+        s = "0";
+      }
+      testVector += s;
     }
     else if (inputNode == info.input2)
     {
-      testVector += getBooleanValueString(gate->getInput2());
+      BooleanValue input2Value = gate->getInput2();
+      std::string s = getBooleanValueString(input2Value);
+      if ((inputNode == faultyNode) && (input2Value == BooleanValue::_D))
+      {
+        s = "1";
+      }
+      else if ((inputNode == faultyNode) && (input2Value == BooleanValue::_D_Bar))
+      {
+        s = "0";
+      }
+      testVector += s;
     }
     else
     {

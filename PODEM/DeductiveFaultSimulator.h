@@ -39,7 +39,7 @@ private:
   void buildCircuit(GateInfoMap_t& gates, ParsedGateInfo_t& gateInfo);
   void propagateConnection(Gate* gate);
   void assignPrimaryInputs();
-  std::string getTestVector();
+  std::string getTestVector(NodeId_t faultyNode);
 
   bool isInputFannedIn(NodeId_t input);
   Gate* getFanInGate(NodeId_t input);

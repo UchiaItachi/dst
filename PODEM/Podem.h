@@ -13,6 +13,7 @@ public:
   Podem(DeductiveFaultSimulator& simulator);
 
   bool Podemize(NodeId_t faultyNode, bool stuckAtValue);
+  void reset();
 
 private:
   typedef bool ControllingValue_t;
@@ -26,7 +27,8 @@ private:
   Objective_t getObjective(NodeId_t faultyNode, bool stuckAtValue);
   PrimaryInputBacktrace_t backtrace(NodeId_t objectiveNode, bool value);
   void imply(PrimaryInput_t piNode, BooleanValue value);
-  bool xpathCheck(NodeId_t faultyNode);
+  bool testPossible(NodeId_t faultyNode);
+  bool xpathCheck(NodeId_t faultNode);
   bool isValueOfLAnX(NodeId_t line);
   bool isErrorAtPrimaryOutput();
 

@@ -13,11 +13,11 @@ class GateBase: public Gate
 public:
   GateBase(ParsedGateInfo gi);
 
-  BooleanValue getOutput() override;
   void setInput1Gate(Gate* gate) override;
   void setInput2Gate(Gate* gate) override;
   BooleanValue getOutputReval() override;
-  void markAsPrimaryGate();
+  void markAsPrimaryGate() override;
+  void markAsFaultyGate(NodeId_t faultyNode, bool stuckAtValue) override;
 
   bool isPrimaryGate();
 
@@ -51,8 +51,16 @@ protected:
   BooleanValue input2Value_;
   BooleanValue outputValue_;
   bool isPrimaryGate_;
+  bool isInputFaulty_;
+  bool isOutputFaulty_;
+  bool stuckAtValue_;
+  NodeId_t faultyNode_;
 
   Gate* input1Gate_;
   Gate* input2Gate_;
   std::vector<Gate*> outputFanOut_;
+
+private:
+  bool isFaultyGate() const;
+  BooleanValue evaluateDOrDBar(const BooleanValue& evalItem);
 };
