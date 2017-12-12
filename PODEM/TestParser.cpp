@@ -91,7 +91,7 @@ void TestParser::parseTestFile()
 
 void TestParser::printSummary()
 {
-  std::cout << std::endl << "Test output written to corresponding test output files " << std::endl;
+  std::cout << std::endl << "Test outputs are written to corresponding test output files " << std::endl;
   for (auto& circuit: circuitInfo_)
   {
     std::ofstream output;
@@ -110,7 +110,7 @@ void TestParser::printSummary()
     {
       output //<< "\t" << "Result : " << (pass ? "PASS" : "FAIL")
              << "Input : Net " << testVector.inputNet << " s-a-" << testVector.stuckAtValue
-             << "\n" << "Generated Test Vector : " << testVector.output << " "
+             << "\n" << "Generated Test Vector : " << testVector.output << "\n"
              << std::endl;
     }
     output << std::endl;

@@ -3,11 +3,14 @@
 //
 
 #include "Podem.h"
-#include "DeductiveFaultSimulator.h"
+#include "FaultSimulator.h"
 #include <algorithm>
 
-Podem::Podem(DeductiveFaultSimulator& simulator)
+Podem::Podem(FaultSimulator& simulator)
   : simulator_(simulator)
+  , firstTime_(true)
+  , triedObjectives_()
+  , otherNodeObjectiveFailed_(false)
 {
 
 }
@@ -15,6 +18,10 @@ Podem::Podem(DeductiveFaultSimulator& simulator)
 void Podem::reset()
 {
   inputsForObjective_.clear();
+  triedObjectives_.clear();
+  otherNodeObjectiveFailed_ = false;\
+
+  firstTime_ = true;
 }
 
 bool Podem::Podemize(NodeId_t faultyNode, bool stuckAtValue)
@@ -29,11 +36,13 @@ bool Podem::Podemize(NodeId_t faultyNode, bool stuckAtValue)
     return false;
   }
 
+  firstTime_ = false;
   Objective_t objective = getObjective(faultyNode, stuckAtValue);
-  PrimaryInputBacktrace_t piBackTrace = backtrace(std::get<0>(objective), std::get<1>(objective));
 
+  PrimaryInputBacktrace_t piBackTrace = backtrace(std::get<0>(objective), std::get<1>(objective));
   BooleanValue implyValue = std::get<1>(piBackTrace) ? BooleanValue::_1 : BooleanValue::_0;
   NodeId_t piNode = std::get<0>(piBackTrace);
+  triedNodeForObjetive(std::get<0>(objective), piNode);
   imply(piNode, implyValue);
 
   if (Podemize(faultyNode, stuckAtValue))
@@ -42,6 +51,7 @@ bool Podem::Podemize(NodeId_t faultyNode, bool stuckAtValue)
   }
 
   imply(piNode, !implyValue);
+  triedNodeForObjetive(std::get<0>(objective), piNode);
 
   if (Podemize(faultyNode, stuckAtValue))
   {
@@ -50,6 +60,7 @@ bool Podem::Podemize(NodeId_t faultyNode, bool stuckAtValue)
 
   imply(piNode, BooleanValue::_X);
 
+  failedNodeForObjetive(std::get<0>(objective), piNode);
   return false;
 }
 
@@ -59,7 +70,7 @@ bool Podem::isValueOfLAnX(NodeId_t faultyLine)
   Gate *gate = nullptr;
   if (isPrimaryInputNode)
   {
-    DeductiveFaultSimulator::GateList_t gatelist = simulator_.getGatesWithPrimaryInputNode(faultyLine);
+    FaultSimulator::GateList_t gatelist = simulator_.getGatesWithPrimaryInputNode(faultyLine);
     gate = gatelist[0];
   }
   else
@@ -98,8 +109,9 @@ Podem::Objective_t Podem::getObjective(NodeId_t faultyNode, bool stuckAtValue)
     return std::make_tuple(faultyNode, !stuckAtValue);
   }
 
-  if (simulator_.dFrontierGates_.empty())
+  if (simulator_.dFrontierGates_.empty() && (!firstTime_))
   {
+    //std::cout << "D forntier empty ..... " << std::endl;
     throw std::exception();
   }
 
@@ -109,17 +121,11 @@ Podem::Objective_t Podem::getObjective(NodeId_t faultyNode, bool stuckAtValue)
   {
     if (inputNodeValue == BooleanValue::_X)
     {
-      objective = std::make_tuple(inputNode, !cValue);
-      return true;
-      auto& takenInputsOfGate = inputsForObjective_[dFrontierGate];
-      auto posIt = std::find(takenInputsOfGate.begin(), takenInputsOfGate.end(), inputNode);
-      if (posIt == takenInputsOfGate.end())
+     // if (!triedObjectives_[inputNode])
       {
-        takenInputsOfGate.push_back(inputNode);
         objective = std::make_tuple(inputNode, !cValue);
         return true;
       }
-      return true;
     }
     return false;
   };
@@ -152,38 +158,65 @@ Podem::Objective_t Podem::getObjective(NodeId_t faultyNode, bool stuckAtValue)
       return objective;
     }
   }
-
+  //return objective;
+  std::cout << "No objective found ..... " << std::endl;
   throw std::exception();
 }
 
 Podem::PrimaryInputBacktrace_t Podem::backtrace(NodeId_t objectiveNode, bool value)
 {
   bool finalValue = value;
-  while (simulator_.isGate(objectiveNode))
+  NodeId_t inputNode = objectiveNode;
+  while (simulator_.isGate(inputNode))
   {
-    Gate* gate = simulator_.getGate(objectiveNode);
+    //std::cout << "bt....\n";
+    Gate* gate = simulator_.getGate(inputNode);
     bool inversionParity = gate->getInversionParity();
-
+    GateType gateType = gate->getInfo().gateType;
     if (gate->getInput1() == BooleanValue::_X)
     {
-      finalValue = (finalValue && (!inversionParity)) || ((!finalValue) && inversionParity);
-      objectiveNode = gate->getInfo().input1;
+      NodeId_t temp = gate->getInfo().input1;
+     // if (!isFailedNodeForObjective(objectiveNode, temp))
+      {
+        finalValue = (finalValue && (!inversionParity)) || ((!finalValue) && inversionParity);
+        inputNode = gate->getInfo().input1;
+        continue;
+      }
     }
-    else if (gate->getInput2() == BooleanValue::_X)
+
+    if ((gateType != GateType::BUFF) && (gateType != GateType::NOT))
     {
-      finalValue = (finalValue && (!inversionParity)) || ((!finalValue) && inversionParity);
-      objectiveNode = gate->getInfo().input2;
+      if (gate->getInput2() == BooleanValue::_X)
+      {
+        NodeId_t temp = gate->getInfo().input2;
+       // if (!isFailedNodeForObjective(objectiveNode, temp))
+        {
+          finalValue = (finalValue && (!inversionParity)) || ((!finalValue) && inversionParity);
+          inputNode = gate->getInfo().input2;
+          continue;
+        }
+      }
     }
   }
 
-  PrimaryInputBacktrace_t pi = std::make_tuple(objectiveNode, finalValue);
+  if (simulator_.isGate(objectiveNode))
+  {
+    Gate *gate = simulator_.getGate(objectiveNode);
+    auto& nodes = inputsForObjective_[gate];
+    auto it = std::find (nodes.begin(), nodes.end(), inputNode);
+    if (it == nodes.end())
+    {
+      nodes.push_back(inputNode);
+    }
+  }
+  PrimaryInputBacktrace_t pi = std::make_tuple(inputNode, finalValue);
 
   return pi;
 }
 
 void Podem::imply(Podem::PrimaryInput_t piNode, BooleanValue value)
 {
-  DeductiveFaultSimulator::GateList_t piGates = simulator_.getGatesWithPrimaryInputNode(piNode);
+  FaultSimulator::GateList_t piGates = simulator_.getGatesWithPrimaryInputNode(piNode);
 
   for (auto& gate: piGates)
   {
@@ -209,9 +242,23 @@ void Podem::imply(Podem::PrimaryInput_t piNode, BooleanValue value)
 
 bool Podem::testPossible(NodeId_t faultyNode)
 {
+  if (firstTime_)
+  {
+    return true;
+  }
+
   if (simulator_.dFrontierGates_.empty())
   {
-     return xpathCheck(faultyNode);
+     if (isValueOfLAnX(faultyNode))
+     {
+       return true;
+     }
+     return false;
+  }
+
+  if (arePrimrayInputsImplied(faultyNode))
+  {
+    return false;
   }
 
   for (auto& dGate: simulator_.dFrontierGates_)
@@ -255,6 +302,7 @@ bool Podem::xpathCheck(NodeId_t checkFromNode)
     fanoutGates = simulator_.getGatesWithPrimaryInputNode(checkFromNode);
   }
 
+
   if (fanoutGates.empty() && faultyGate)
   {
     NodeId_t oNode = faultyGate->getInfo().output;
@@ -290,4 +338,18 @@ bool Podem::isErrorAtPrimaryOutput()
     }
   }
   return false;
+}
+
+bool Podem::arePrimrayInputsImplied(NodeId_t objective)
+{
+  PrimaryNodeList_t gl = simulator_.getPrimaryInputsForObjective(objective);
+
+  for (auto& pi: gl)
+  {
+    if (!isFailedNodeForObjective(objective, pi))
+    {
+      return false;
+    }
+  }
+  return true;
 }

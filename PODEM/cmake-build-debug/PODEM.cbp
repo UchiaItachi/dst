@@ -102,10 +102,10 @@
 		<Unit filename="/home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/PODEM/CircuitParser.h">
 			<Option target="PODEM"/>
 		</Unit>
-		<Unit filename="/home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/PODEM/DeductiveFaultSimulator.cpp">
+		<Unit filename="/home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/PODEM/FaultSimulator.cpp">
 			<Option target="PODEM"/>
 		</Unit>
-		<Unit filename="/home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/PODEM/DeductiveFaultSimulator.h">
+		<Unit filename="/home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/PODEM/FaultSimulator.h">
 			<Option target="PODEM"/>
 		</Unit>
 		<Unit filename="/home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/PODEM/Gate.h">

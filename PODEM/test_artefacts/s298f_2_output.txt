@@ -1,12 +1,1216 @@
 Netlist File : /home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/PODEM/test_artefacts/s298f_2.txt
 Test Input File : /home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/PODEM/test_artefacts/s298f_2_input.txt
 
-Input : Net 70 s-a-1
-Generated Test Vector : 01X1XXXXXXXXXX0XX 
-Input : Net 73 s-a-0
-Generated Test Vector : 111XXXXXXXXXXX0XX 
+Input : Net 18 s-a-0
+Generated Test Vector : 0XXXXXXXXXXXXX0XX
+
+Input : Net 18 s-a-1
+Generated Test Vector : 1XXXXXXXXXXXXXXXX
+
+Input : Net 19 s-a-0
+Generated Test Vector : 01X0XXXXXXXXXX0XX
+
+Input : Net 19 s-a-1
+Generated Test Vector : 1X01XXXXXXXXXXXXX
+
+Input : Net 20 s-a-0
+Generated Test Vector : 110XXXXXXXXXXX0XX
+
+Input : Net 20 s-a-1
+Generated Test Vector : 111XXXXXXXXXXXXXX
+
+Input : Net 21 s-a-0
+Generated Test Vector : 1110XXXXXXXXXX0XX
+
+Input : Net 21 s-a-1
+Generated Test Vector : 0XX0XXXXXXXXXXXXX
+
+Input : Net 22 s-a-0
+Generated Test Vector : X1XX1XXXXXXXX00XX
+
+Input : Net 22 s-a-1
+Generated Test Vector : 10011XXXXXXXXXXXX
+
+Input : Net 23 s-a-0
+Generated Test Vector : X0010XXXXXXX1X0XX
+
+Input : Net 23 s-a-1
+Generated Test Vector : X1010XXXXXXX0XXXX
+
+Input : Net 24 s-a-0
+Generated Test Vector : X1010XXXXXXX0XXXX
+
+Input : Net 24 s-a-1
+Generated Test Vector : XXXX1X0XXXXXXXXXX
+
+Input : Net 25 s-a-0
+Generated Test Vector : X1X010X1XXXXXXXXX
+
+Input : Net 25 s-a-1
+Generated Test Vector : XXX1XXX0XXXXXXXXX
+
+Input : Net 26 s-a-0
+Generated Test Vector : X100X0XXXXXXXXXXX
+
 Input : Net 26 s-a-1
-Generated Test Vector : XX1X1XXX0XXXXXXXX 
+Generated Test Vector : XX1X1XXX0XXXXXXXX
+
+Input : Net 27 s-a-0
+Generated Test Vector : 0X1X1XXXX1XXXXXXX
+
+Input : Net 27 s-a-1
+Generated Test Vector : XXX000XXX0XXXXXXX
+
+Input : Net 28 s-a-0
+Generated Test Vector : 0X011XXXXX1XXXXXX
+
+Input : Net 28 s-a-1
+Generated Test Vector : X100X0XXXXXXXXXXX
+
+Input : Net 29 s-a-0
+Generated Test Vector : X11000XXXXXXXXXXX
+
+Input : Net 29 s-a-1
+Generated Test Vector : XXXX1XXXXXX0XXXXX
+
+Input : Net 30 s-a-0
+Generated Test Vector : XXXXXXXXXXXX1X0X0
+
+Input : Net 30 s-a-1
+Generated Test Vector : XXXXXXXXXXXX0XXX0
+
+Input : Net 31 s-a-0
+Generated Test Vector : XXXXXXXXXXXXX100X
+
+Input : Net 31 s-a-1
+Generated Test Vector : XXXXXXXXXXXXX0X0X
+
+Input : Net 32 s-a-0
+Generated Test Vector : XXXXXXXX1XXXXXXXX
+
+Input : Net 32 s-a-1
+Generated Test Vector : XXXXXXXX0XXXXXXXX
+
+Input : Net 33 s-a-0
+Generated Test Vector : XXXXXXXXXX1XXXXXX
+
+Input : Net 33 s-a-1
+Generated Test Vector : XXXXXXXXXX0XXXXXX
+
+Input : Net 34 s-a-0
+Generated Test Vector : XXXXXX1XXXXXXXXXX
+
+Input : Net 34 s-a-1
+Generated Test Vector : XXXXXX0XXXXXXXXXX
+
+Input : Net 35 s-a-0
+Generated Test Vector : XXXXXXXXX1XXXXXXX
+
+Input : Net 35 s-a-1
+Generated Test Vector : XXXXXXXXX0XXXXXXX
+
+Input : Net 36 s-a-0
+Generated Test Vector : XXXXXXXXXXX1XXXXX
+
+Input : Net 36 s-a-1
+Generated Test Vector : XXXXXXXXXXX0XXXXX
+
+Input : Net 37 s-a-0
+Generated Test Vector : XXXXXXX1XXXXXXXXX
+
+Input : Net 37 s-a-1
+Generated Test Vector : XXXXXXX0XXXXXXXXX
+
+Input : Net 38 s-a-0
+Generated Test Vector : 01X0XXXXXXXXXX0XX
+
+Input : Net 38 s-a-1
+Generated Test Vector : 1X01XXXXXXXXXX0XX
+
+Input : Net 39 s-a-0
+Generated Test Vector : 10X0XXXXXXXXXX0XX
+
+Input : Net 39 s-a-1
+Generated Test Vector : 0XX0XXXXXXXXXX1XX
+
+Input : Net 40 s-a-0
+Generated Test Vector : 110XXXXXXXXXXX0XX
+
+Input : Net 40 s-a-1
+Generated Test Vector : 111XXXXXXXXXXX0XX
+
+Input : Net 41 s-a-0
+Generated Test Vector : 110XXXXXXXXXXX0XX
+
+Input : Net 41 s-a-1
+Generated Test Vector : 1X0XXXXXXXXXXX1XX
+
+Input : Net 42 s-a-0
+Generated Test Vector : 0XX0XXXXXXXXXX0XX
+
+Input : Net 42 s-a-1
+Generated Test Vector : 1110XXXXXXXXXX0XX
+
+Input : Net 43 s-a-0
+Generated Test Vector : 111XXXXXXXXXXX1XX
+
+Input : Net 43 s-a-1
+Generated Test Vector : 0XX1XXXXXXXXXX0XX
+
+Input : Net 44 s-a-0
+Generated Test Vector : X1XX1XXXXXXXX00XX
+
+Input : Net 44 s-a-1
+Generated Test Vector : 10011XXXXXXXX00XX
+
+Input : Net 45 s-a-0
+Generated Test Vector : 10010XXXXXXXXX0XX
+
+Input : Net 45 s-a-1
+Generated Test Vector : X1XX1XXXXXXXX1XXX
+
+Input : Net 46 s-a-0
+Generated Test Vector : X0010XXXXXXX1X0XX
+
+Input : Net 46 s-a-1
+Generated Test Vector : X1010XXXXXXX0X0XX
+
+Input : Net 47 s-a-0
+Generated Test Vector : X0010XXXXXXX1X0XX
+
+Input : Net 47 s-a-1
+Generated Test Vector : X0010XXXXXXX1X1XX
+
+Input : Net 48 s-a-0
+Generated Test Vector : X1010XXXXXXX0XXXX
+
+Input : Net 48 s-a-1
+Generated Test Vector : XX1X100XXXXXXXXXX
+
+Input : Net 49 s-a-0
+Generated Test Vector : X1010XXXXXXX0XXXX
+
+Input : Net 49 s-a-1
+Generated Test Vector : X0010XXXXXXX1XXXX
+
+Input : Net 50 s-a-0
+Generated Test Vector : X1X010X1XXXXXXXXX
+
+Input : Net 50 s-a-1
+Generated Test Vector : XX0110X0XXXXXXXXX
+
+Input : Net 51 s-a-0
+Generated Test Vector : X1XX10X1XXXXXXXXX
+
+Input : Net 51 s-a-1
+Generated Test Vector : X0001XXXXXXXXXXXX
+
+Input : Net 52 s-a-0
+Generated Test Vector : XX1010XX0XXXXXXXX
+
+Input : Net 52 s-a-1
+Generated Test Vector : X100X0XXXXXXXXXXX
+
+Input : Net 53 s-a-0
+Generated Test Vector : X0001XXXXXXXXXXXX
+
+Input : Net 53 s-a-1
+Generated Test Vector : X100X0XXXXXXXXXXX
+
+Input : Net 54 s-a-0
+Generated Test Vector : XXX000XXX0XXXXXXX
+
+Input : Net 54 s-a-1
+Generated Test Vector : 0X1X1XXXX1XXXXXXX
+
+Input : Net 55 s-a-0
+Generated Test Vector : 110101XXXXXX1XXXX
+
+Input : Net 55 s-a-1
+Generated Test Vector : 0X101XXXX1XXXXXXX
+
+Input : Net 56 s-a-0
+Generated Test Vector : X100X0XXXXXXXXXXX
+
+Input : Net 56 s-a-1
+Generated Test Vector : 0X011XXXXX1XXXXXX
+
+Input : Net 57 s-a-0
+Generated Test Vector : 10010XXXXXXX1XXXX
+
+Input : Net 57 s-a-1
+Generated Test Vector : 0X011XXXXX1XXXXXX
+
+Input : Net 58 s-a-0
+Generated Test Vector : XX1X10XXXXX0XXXXX
+
+Input : Net 58 s-a-1
+Generated Test Vector : X11000XXXXXXXXXXX
+
+Input : Net 59 s-a-0
+Generated Test Vector : XXX10XXXXXXXXXXXX
+
+Input : Net 59 s-a-1
+Generated Test Vector : X11000XXXXXXXXXXX
+
+Input : Net 60 s-a-0
+Generated Test Vector : XXXXXXXXXXXX1X0X0
+
+Input : Net 60 s-a-1
+Generated Test Vector : XXXXXXXXXXXX0X0X0
+
+Input : Net 61 s-a-0
+Generated Test Vector : XXXXXXXXXXXX1X0X0
+
+Input : Net 61 s-a-1
+Generated Test Vector : XXXXXXXXXXXX1X1X0
+
+Input : Net 62 s-a-0
+Generated Test Vector : XXXXXXXXXXXXX100X
+
+Input : Net 62 s-a-1
+Generated Test Vector : XXXXXXXXXXXXX000X
+
+Input : Net 63 s-a-0
+Generated Test Vector : XXXXXXXXXXXXX100X
+
+Input : Net 63 s-a-1
+Generated Test Vector : XXXXXXXXXXXXX110X
+
+Input : Net 64 s-a-0
+Generated Test Vector : X0010XXXXXXX1XXXX
+
+Input : Net 64 s-a-1
+Generated Test Vector : X1010XXXXXXX0XXXX
+
+Input : Net 65 s-a-0
+Generated Test Vector : X10101XXXXXX0XXXX
+
+Input : Net 65 s-a-1
+Generated Test Vector : X0010XXXXXXX1XXXX
+
+Input : Net 66 s-a-0
+Generated Test Vector : X11100XXXXXXXXXXX
+
+Input : Net 66 s-a-1
+Generated Test Vector : X0010XXXXXXX1XXXX
+
+Input : Net 67 s-a-0
+Generated Test Vector : XXXX0XXXXXXXX10XX
+
+Input : Net 67 s-a-1
+Generated Test Vector : X1XX1XXXXXXXX1XXX
+
+Input : Net 68 s-a-0
+Generated Test Vector : X1XX1XXXXXXXX00XX
+
+Input : Net 68 s-a-1
+Generated Test Vector : X1XX1XXXXXXXX1XXX
+
+Input : Net 69 s-a-0
+Generated Test Vector : 1001XXXXXXXXXX0XX
+
+Input : Net 69 s-a-1
+Generated Test Vector : 01X0XXXXXXXXXX0XX
+
+Input : Net 70 s-a-0
+Generated Test Vector : 1001XXXXXXXXXX0XX
+
+Input : Net 70 s-a-1
+Generated Test Vector : 01X1XXXXXXXXXX0XX
+
+Input : Net 71 s-a-0
+Generated Test Vector : 11X0XXXXXXXXXX0XX
+
+Input : Net 71 s-a-1
+Generated Test Vector : 01XXXXXXXXXXXX0XX
+
+Input : Net 72 s-a-0
+Generated Test Vector : 00XXXXXXXXXXXX0XX
+
+Input : Net 72 s-a-1
+Generated Test Vector : 10X0XXXXXXXXXX0XX
+
+Input : Net 73 s-a-0
+Generated Test Vector : 111XXXXXXXXXXX0XX
+
+Input : Net 73 s-a-1
+Generated Test Vector : 110XXXXXXXXXXX0XX
+
+Input : Net 74 s-a-0
+Generated Test Vector : 111XXXXXXXXXXX0XX
+
+Input : Net 74 s-a-1
+Generated Test Vector : 0X1XXXXXXXXXXX0XX
+
+Input : Net 75 s-a-0
+Generated Test Vector : 010XXXXXXXXXXX0XX
+
+Input : Net 75 s-a-1
+Generated Test Vector : 110XXXXXXXXXXX0XX
+
+Input : Net 76 s-a-0
+Generated Test Vector : 100XXXXXXXXXXX0XX
+
+Input : Net 76 s-a-1
+Generated Test Vector : 110XXXXXXXXXXX0XX
+
+Input : Net 77 s-a-0
+Generated Test Vector : 0XX0XXXXXXXXXX0XX
+
+Input : Net 77 s-a-1
+Generated Test Vector : 1110XXXXXXXXXX0XX
+
+Input : Net 78 s-a-0
+Generated Test Vector : 0110XXXXXXXXXX0XX
+
+Input : Net 78 s-a-1
+Generated Test Vector : 1110XXXXXXXXXX0XX
+
+Input : Net 79 s-a-0
+Generated Test Vector : 1010XXXXXXXXXX0XX
+
+Input : Net 79 s-a-1
+Generated Test Vector : 1110XXXXXXXXXX0XX
+
+Input : Net 80 s-a-0
+Generated Test Vector : 0XX0XXXXXXXXXX0XX
+
+Input : Net 80 s-a-1
+Generated Test Vector : 0XX1XXXXXXXXXX0XX
+
+Input : Net 81 s-a-0
+Generated Test Vector : 10011XXXXXXXX00XX
+
+Input : Net 81 s-a-1
+Generated Test Vector : 10001XXXXXXXX00XX
+
+Input : Net 82 s-a-0
+Generated Test Vector : 10011XXXXXXXX00XX
+
+Input : Net 82 s-a-1
+Generated Test Vector : X1XX1XXXXXXXX00XX
+
+Input : Net 83 s-a-0
+Generated Test Vector : 10011XXXXXXXX00XX
+
+Input : Net 83 s-a-1
+Generated Test Vector : 11X11XXXXXXXX00XX
+
+Input : Net 84 s-a-0
+Generated Test Vector : 10011XXXXXXXX00XX
+
+Input : Net 84 s-a-1
+Generated Test Vector : 000X1XXXXXXXX00XX
+
+Input : Net 85 s-a-0
+Generated Test Vector : XX1X0XXXXXXXX00XX
+
+Input : Net 85 s-a-1
+Generated Test Vector : 10010XXXXXXXX00XX
+
+Input : Net 86 s-a-0
+Generated Test Vector : 101X0XXXXXXXX00XX
+
+Input : Net 86 s-a-1
+Generated Test Vector : 10010XXXXXXXX00XX
+
+Input : Net 87 s-a-0
+Generated Test Vector : 0X010XXXXXXXX00XX
+
+Input : Net 87 s-a-1
+Generated Test Vector : 10010XXXXXXXX00XX
+
+Input : Net 88 s-a-0
+Generated Test Vector : XX1X0XXXXXXXX00XX
+
+Input : Net 88 s-a-1
+Generated Test Vector : 10010XXXXXXXXX0XX
+
+Input : Net 89 s-a-0
+Generated Test Vector : XX1X0XXXXXXXX00XX
+
+Input : Net 89 s-a-1
+Generated Test Vector : XX1X1XXXXXXXX00XX
+
+Input : Net 90 s-a-0
+Generated Test Vector : X10101XXXXXX0XXXX
+
+Input : Net 90 s-a-1
+Generated Test Vector : X100X1XXXXXX0XXXX
+
+Input : Net 91 s-a-0
+Generated Test Vector : X10101XXXXXX0XXXX
+
+Input : Net 91 s-a-1
+Generated Test Vector : X10111XXXXXX0X0XX
+
 Input : Net 92 s-a-0
-Generated Test Vector : X10101XXXXXX0X0XX 
+Generated Test Vector : X10101XXXXXX0X0XX
+
+Input : Net 92 s-a-1
+Generated Test Vector : X0010XXXXXXX1X0XX
+
+Input : Net 93 s-a-0
+Generated Test Vector : X10101XXXXXX0X0XX
+
+Input : Net 93 s-a-1
+Generated Test Vector : X0X101XXXXXX0X0XX
+
+Input : Net 94 s-a-0
+Generated Test Vector : X10101XXXXXX0X0XX
+
+Input : Net 94 s-a-1
+Generated Test Vector : X100X1XXXXXXXX0XX
+
+Input : Net 95 s-a-0
+Generated Test Vector : X11XX0XXXXXXXX0XX
+
+Input : Net 95 s-a-1
+Generated Test Vector : X00100XXXXXX1XXXX
+
+Input : Net 96 s-a-0
+Generated Test Vector : X1X100XXXXXX1XXXX
+
+Input : Net 96 s-a-1
+Generated Test Vector : X00100XXXXXX1XXXX
+
+Input : Net 97 s-a-0
+Generated Test Vector : X00XX0XXXXXX0X0XX
+
+Input : Net 97 s-a-1
+Generated Test Vector : X00100XXXXXX1XXXX
+
+Input : Net 98 s-a-0
+Generated Test Vector : X11XX0XXXXXXXX0XX
+
+Input : Net 98 s-a-1
+Generated Test Vector : X0010XXXXXXX1X0XX
+
+Input : Net 99 s-a-0
+Generated Test Vector : X11XX0XXXXXXXX0XX
+
+Input : Net 99 s-a-1
+Generated Test Vector : X11XX1XXXXXXXX0XX
+
+Input : Net 100 s-a-0
+Generated Test Vector : X10101XXXXXX0XXXX
+
+Input : Net 100 s-a-1
+Generated Test Vector : X0X101XXXXXX0XXXX
+
+Input : Net 101 s-a-0
+Generated Test Vector : X10101XXXXXX0XXXX
+
+Input : Net 101 s-a-1
+Generated Test Vector : X100X1XXXXXXXXXXX
+
+Input : Net 102 s-a-0
+Generated Test Vector : X11100XXXXXXXXXXX
+
+Input : Net 102 s-a-1
+Generated Test Vector : X11101XXXXXXXXXXX
+
+Input : Net 103 s-a-0
+Generated Test Vector : XX1010XXX1XXXXXXX
+
+Input : Net 103 s-a-1
+Generated Test Vector : XXX000XXX0XXXXXXX
+
+Input : Net 104 s-a-0
+Generated Test Vector : XX1010XXX1XXXXXXX
+
+Input : Net 104 s-a-1
+Generated Test Vector : XX0000XXX1XXXXXXX
+
+Input : Net 105 s-a-0
+Generated Test Vector : X00010XXXXXXXXXXX
+
+Input : Net 105 s-a-1
+Generated Test Vector : XXX000XXXXXXXXXXX
+
+Input : Net 106 s-a-0
+Generated Test Vector : X00010XXXXXXXXXXX
+
+Input : Net 106 s-a-1
+Generated Test Vector : X1X010XXX0XXXXXXX
+
+Input : Net 107 s-a-0
+Generated Test Vector : XX1X100XXXXXXXXXX
+
+Input : Net 107 s-a-1
+Generated Test Vector : X1010XXXXXXX0XXXX
+
+Input : Net 108 s-a-0
+Generated Test Vector : XX1X100XXXXXXXXXX
+
+Input : Net 108 s-a-1
+Generated Test Vector : XX1X101XXXXXXXXXX
+
+Input : Net 109 s-a-0
+Generated Test Vector : XX1000XXXXXXXXXXX
+
+Input : Net 109 s-a-1
+Generated Test Vector : X1010XXXXXXX0XXXX
+
+Input : Net 110 s-a-0
+Generated Test Vector : XX00101XXXXXXXXXX
+
+Input : Net 110 s-a-1
+Generated Test Vector : XX1100XXXXXXXXXXX
+
+Input : Net 111 s-a-0
+Generated Test Vector : XX0110X0XXXXXXXXX
+
+Input : Net 111 s-a-1
+Generated Test Vector : X1X010X1XXXXXXXXX
+
+Input : Net 112 s-a-0
+Generated Test Vector : XX0110X0XXXXXXXXX
+
+Input : Net 112 s-a-1
+Generated Test Vector : XXX110X1XXXXXXXXX
+
+Input : Net 113 s-a-0
+Generated Test Vector : X01100X1XXXXXXXXX
+
+Input : Net 113 s-a-1
+Generated Test Vector : X1X010X1XXXXXXXXX
+
+Input : Net 114 s-a-0
+Generated Test Vector : X01100X1XXXXXXXXX
+
+Input : Net 114 s-a-1
+Generated Test Vector : XXX110X1XXXXXXXXX
+
+Input : Net 115 s-a-0
+Generated Test Vector : XX1010XX0XXXXXXXX
+
+Input : Net 115 s-a-1
+Generated Test Vector : XX1000XXXXXXXXXXX
+
+Input : Net 116 s-a-0
+Generated Test Vector : XXX000XXX0XXXXXXX
+
+Input : Net 116 s-a-1
+Generated Test Vector : XX1010XXX1XXXXXXX
+
+Input : Net 117 s-a-0
+Generated Test Vector : XXX000XXX0XXXXXXX
+
+Input : Net 117 s-a-1
+Generated Test Vector : 0XX10XXXX0XXXXXXX
+
+Input : Net 118 s-a-0
+Generated Test Vector : X100X0XXXXXXXXXXX
+
+Input : Net 118 s-a-1
+Generated Test Vector : XX0110XXXX1XXXXXX
+
+Input : Net 119 s-a-0
+Generated Test Vector : X10010XXXXXXXXXXX
+
+Input : Net 119 s-a-1
+Generated Test Vector : XX0110XXXX1XXXXXX
+
+Input : Net 120 s-a-0
+Generated Test Vector : X1010XXXXXXX0XXXX
+
+Input : Net 120 s-a-1
+Generated Test Vector : X00010XXXXXXXXXXX
+
+Input : Net 121 s-a-0
+Generated Test Vector : X1010XXXXXXX0XXXX
+
+Input : Net 121 s-a-1
+Generated Test Vector : 00010XXXXXXX1XXXX
+
+Input : Net 122 s-a-0
+Generated Test Vector : XX1X10XXXXX0XXXXX
+
+Input : Net 122 s-a-1
+Generated Test Vector : XX1X10XXXXX1XXXXX
+
+Input : Net 123 s-a-0
+Generated Test Vector : XXXXXXXXXXXX0X0X0
+
+Input : Net 123 s-a-1
+Generated Test Vector : XXXXXXXXXXXX1X0X0
+
+Input : Net 124 s-a-0
+Generated Test Vector : XXXXXXXXXXXX1X0X1
+
+Input : Net 124 s-a-1
+Generated Test Vector : XXXXXXXXXXXX0X0X1
+
+Input : Net 125 s-a-0
+Generated Test Vector : XXXXXXXXXXXXX000X
+
+Input : Net 125 s-a-1
+Generated Test Vector : XXXXXXXXXXXXX100X
+
+Input : Net 126 s-a-0
+Generated Test Vector : XXXXXXXXXXXXX101X
+
+Input : Net 126 s-a-1
+Generated Test Vector : XXXXXXXXXXXXX001X
+
+Input : Net 127 s-a-0
+Generated Test Vector : 0XX1XXXXXXXXXX0XX
+
+Input : Net 127 s-a-1
+Generated Test Vector : 1111XXXXXXXXXX0XX
+
+Input : Net 128 s-a-0
+Generated Test Vector : 0X11XXXXXXXXXX0XX
+
+Input : Net 128 s-a-1
+Generated Test Vector : 1111XXXXXXXXXX0XX
+
+Input : Net 129 s-a-0
+Generated Test Vector : 1101XXXXXXXXXX0XX
+
+Input : Net 129 s-a-1
+Generated Test Vector : 1111XXXXXXXXXX0XX
+
+Input : Net 130 s-a-0
+Generated Test Vector : 0X11XXXXXXXXXX0XX
+
+Input : Net 130 s-a-1
+Generated Test Vector : 1001XXXXXXXXXX0XX
+
+Input : Net 131 s-a-0
+Generated Test Vector : 0X01XXXXXXXXXX0XX
+
+Input : Net 131 s-a-1
+Generated Test Vector : 1001XXXXXXXXXX0XX
+
+Input : Net 132 s-a-0
+Generated Test Vector : X100X0XXXXXXXXXXX
+
+Input : Net 132 s-a-1
+Generated Test Vector : X00010XXXXXXXXXXX
+
+Input : Net 133 s-a-0
+Generated Test Vector : X10010XXXXXXXXXXX
+
+Input : Net 133 s-a-1
+Generated Test Vector : X00010XXXXXXXXXXX
+
+Input : Net 134 s-a-0
+Generated Test Vector : X00110XX1XXX0XXXX
+
+Input : Net 134 s-a-1
+Generated Test Vector : X00010XXXXXXXXXXX
+
+Input : Net 135 s-a-0
+Generated Test Vector : X100X0XXXXXXXXXXX
+
+Input : Net 135 s-a-1
+Generated Test Vector : X10110XX0XXXXXXXX
+
+Input : Net 136 s-a-0
+Generated Test Vector : X100X0XX0XXXXXXXX
+
+Input : Net 136 s-a-1
+Generated Test Vector : X10110XX0XXXXXXXX
+
+Input : Net 137 s-a-0
+Generated Test Vector : X10110XX1XXXXXXXX
+
+Input : Net 137 s-a-1
+Generated Test Vector : X10110XX0XXXXXXXX
+
+Input : Net 138 s-a-0
+Generated Test Vector : X100X0XXXXXXXXXXX
+
+Input : Net 138 s-a-1
+Generated Test Vector : X1010XXX1XXX0XXXX
+
+Input : Net 139 s-a-0
+Generated Test Vector : XXX000XXXXXXXXXXX
+
+Input : Net 139 s-a-1
+Generated Test Vector : X1010XXX1XXX0XXXX
+
+Input : Net 140 s-a-0
+Generated Test Vector : XXX110XX1XXXXXXXX
+
+Input : Net 140 s-a-1
+Generated Test Vector : X1010XXX1XXX0XXXX
+
+Input : Net 141 s-a-0
+Generated Test Vector : XX0110XXXX1XXXXXX
+
+Input : Net 141 s-a-1
+Generated Test Vector : X10010XXXXXXXXXXX
+
+Input : Net 142 s-a-0
+Generated Test Vector : X00010XXXXXXXXXXX
+
+Input : Net 142 s-a-1
+Generated Test Vector : X10010XXXXXXXXXXX
+
+Input : Net 143 s-a-0
+Generated Test Vector : XX0110XXXX1XXXXXX
+
+Input : Net 143 s-a-1
+Generated Test Vector : XX1010XXXX0XXXXXX
+
+Input : Net 144 s-a-0
+Generated Test Vector : X00010XXXX0XXXXXX
+
+Input : Net 144 s-a-1
+Generated Test Vector : XX1010XXXX0XXXXXX
+
+Input : Net 145 s-a-0
+Generated Test Vector : XX1X10XXXX1XXXXXX
+
+Input : Net 145 s-a-1
+Generated Test Vector : XX1010XXXX0XXXXXX
+
+Input : Net 146 s-a-0
+Generated Test Vector : X00010XXXXXXXXXXX
+
+Input : Net 146 s-a-1
+Generated Test Vector : XX0110XXXX0XXXXXX
+
+Input : Net 147 s-a-0
+Generated Test Vector : X00010XXXX0XXXXXX
+
+Input : Net 147 s-a-1
+Generated Test Vector : XX0110XXXX0XXXXXX
+
+Input : Net 148 s-a-0
+Generated Test Vector : XXX110XXXX1XXXXXX
+
+Input : Net 148 s-a-1
+Generated Test Vector : XX0110XXXX0XXXXXX
+
+Input : Net 149 s-a-0
+Generated Test Vector : 0X101XXXX1XXXXXXX
+
+Input : Net 149 s-a-1
+Generated Test Vector : X10110XXX0XXXXXXX
+
+Input : Net 150 s-a-0
+Generated Test Vector : 00001XXXX0XXXXXXX
+
+Input : Net 150 s-a-1
+Generated Test Vector : X10110XXX0XXXXXXX
+
+Input : Net 151 s-a-0
+Generated Test Vector : X1010XXXXXXX0XXXX
+
+Input : Net 151 s-a-1
+Generated Test Vector : XXX110XXX0XXXXXXX
+
+Input : Net 152 s-a-0
+Generated Test Vector : 0X101XXXX1XXXXXXX
+
+Input : Net 152 s-a-1
+Generated Test Vector : 10010XXXXXXX1XXXX
+
+Input : Net 153 s-a-0
+Generated Test Vector : X11000XXXXXXXXXXX
+
+Input : Net 153 s-a-1
+Generated Test Vector : X1010XXXXXXX0XXXX
+
+Input : Net 154 s-a-0
+Generated Test Vector : X11000XXXXXXXXXXX
+
+Input : Net 154 s-a-1
+Generated Test Vector : X1010XXXXXXX0XXXX
+
+Input : Net 155 s-a-0
+Generated Test Vector : XXX110XXXXX1XXXXX
+
+Input : Net 155 s-a-1
+Generated Test Vector : X1010XXXXXXX0XXXX
+
+Input : Net 156 s-a-0
+Generated Test Vector : X11000XXXXXXXXXXX
+
+Input : Net 156 s-a-1
+Generated Test Vector : X01000XXXXXXXXXXX
+
+Input : Net 157 s-a-0
+Generated Test Vector : X11000XXXXXXXXXXX
+
+Input : Net 157 s-a-1
+Generated Test Vector : X10000XXXXXXXXXXX
+
+Input : Net 158 s-a-0
+Generated Test Vector : X1XX10X1XXXXXXXXX
+
+Input : Net 158 s-a-1
+Generated Test Vector : X00010XXXXXXXXXXX
+
+Input : Net 159 s-a-0
+Generated Test Vector : X1X010X1XXXXXXXXX
+
+Input : Net 159 s-a-1
+Generated Test Vector : X00010XXXXXXXXXXX
+
+Input : Net 160 s-a-0
+Generated Test Vector : X00110X1XXXX0XXXX
+
+Input : Net 160 s-a-1
+Generated Test Vector : X00010XXXXXXXXXXX
+
+Input : Net 161 s-a-0
+Generated Test Vector : X1XX10X1XXXXXXXXX
+
+Input : Net 161 s-a-1
+Generated Test Vector : X11000XXXXXXXXXXX
+
+Input : Net 162 s-a-0
+Generated Test Vector : X01000XXXXXXXXXXX
+
+Input : Net 162 s-a-1
+Generated Test Vector : X11000XXXXXXXXXXX
+
+Input : Net 163 s-a-0
+Generated Test Vector : X10110X1XXXXXXXXX
+
+Input : Net 163 s-a-1
+Generated Test Vector : XX1010X0XXXXXXXXX
+
+Input : Net 164 s-a-0
+Generated Test Vector : X100X0X0XXXXXXXXX
+
+Input : Net 164 s-a-1
+Generated Test Vector : XX1010X0XXXXXXXXX
+
+Input : Net 165 s-a-0
+Generated Test Vector : 1111XXXXXXXXXX0XX
+
+Input : Net 165 s-a-1
+Generated Test Vector : 0XX1XXXXXXXXXX0XX
+
+Input : Net 166 s-a-0
+Generated Test Vector : X0001XXXXXXXXXXXX
+
+Input : Net 166 s-a-1
+Generated Test Vector : X1XX10X1XXXXXXXXX
+
+Input : Net 167 s-a-0
+Generated Test Vector : X00010XXXXXXXXXXX
+
+Input : Net 167 s-a-1
+Generated Test Vector : X1XX10X1XXXXXXXXX
+
+Input : Net 168 s-a-0
+Generated Test Vector : X00111X1XXXX1XXXX
+
+Input : Net 168 s-a-1
+Generated Test Vector : X10110X1XXXXXXXXX
+
+Input : Net 169 s-a-0
+Generated Test Vector : X00010XXXXXXXXXXX
+
+Input : Net 169 s-a-1
+Generated Test Vector : X100X0XXXXXXXXXXX
+
+Input : Net 170 s-a-0
+Generated Test Vector : X0010XXX1XXX1XXXX
+
+Input : Net 170 s-a-1
+Generated Test Vector : X10110XX1XXXXXXXX
+
+Input : Net 171 s-a-0
+Generated Test Vector : X1010XXXXXXX0XXXX
+
+Input : Net 171 s-a-1
+Generated Test Vector : X11000XXXXXXXXXXX
+
+Input : Net 172 s-a-0
+Generated Test Vector : X00111XXXXX11XXXX
+
+Input : Net 172 s-a-1
+Generated Test Vector : X10110XXXXX1XXXXX
+
+Input : Net 173 s-a-0
+Generated Test Vector : X1XX1XXXXXXXX1XXX
+
+Input : Net 173 s-a-1
+Generated Test Vector : 10010XXXXXXXXX0XX
+
+Input : Net 174 s-a-0
+Generated Test Vector : X00111XXXXX11XXXX
+
+Input : Net 174 s-a-1
+Generated Test Vector : X10110XXXXX1XXXXX
+
+Input : Net 175 s-a-0
+Generated Test Vector : X10000XXXXXXXXXXX
+
+Input : Net 175 s-a-1
+Generated Test Vector : X11000XXXXXXXXXXX
+
+Input : Net 176 s-a-0
+Generated Test Vector : X00010XXXXXXXXXXX
+
+Input : Net 176 s-a-1
+Generated Test Vector : X10010XXXXXXXXXXX
+
+Input : Net 177 s-a-0
+Generated Test Vector : X11010XXXX1XXXXXX
+
+Input : Net 177 s-a-1
+Generated Test Vector : X10010XXXXXXXXXXX
+
+Input : Net 178 s-a-0
+Generated Test Vector : X1010XXXX0XX0XXXX
+
+Input : Net 178 s-a-1
+Generated Test Vector : XXX110XXX0XXXXXXX
+
+Input : Net 179 s-a-0
+Generated Test Vector : XXX110XXX1XXXXXXX
+
+Input : Net 179 s-a-1
+Generated Test Vector : XXX110XXX0XXXXXXX
+
+Input : Net 180 s-a-0
+Generated Test Vector : X00010XXX0XXXXXXX
+
+Input : Net 180 s-a-1
+Generated Test Vector : X10110XXX0XXXXXXX
+
+Input : Net 181 s-a-0
+Generated Test Vector : 000111XXX0XX1XXXX
+
+Input : Net 181 s-a-1
+Generated Test Vector : X10110XXX0XXXXXXX
+
+Input : Net 182 s-a-0
+Generated Test Vector : X00111XX1XXX1XXXX
+
+Input : Net 182 s-a-1
+Generated Test Vector : X10110XX1XXXXXXXX
+
+Input : Net 183 s-a-0
+Generated Test Vector : X1010XXX1XXX0XXXX
+
+Input : Net 183 s-a-1
+Generated Test Vector : X100X0XXXXXXXXXXX
+
+Input : Net 184 s-a-0
+Generated Test Vector : X00110XX1XXXXXXXX
+
+Input : Net 184 s-a-1
+Generated Test Vector : X00010XXXXXXXXXXX
+
+Input : Net 185 s-a-0
+Generated Test Vector : X00000XXXXXXXXXXX
+
+Input : Net 185 s-a-1
+Generated Test Vector : X00010XXXXXXXXXXX
+
+Input : Net 186 s-a-0
+Generated Test Vector : XX1010XX0XXXXXXXX
+
+Input : Net 186 s-a-1
+Generated Test Vector : XX1X10XX1XXXXXXXX
+
+Input : Net 187 s-a-0
+Generated Test Vector : X00111X1XXXX1XXXX
+
+Input : Net 187 s-a-1
+Generated Test Vector : X10110X1XXXXXXXXX
+
+Input : Net 188 s-a-0
+Generated Test Vector : XX1010X0XXXXXXXXX
+
+Input : Net 188 s-a-1
+Generated Test Vector : X10110X1XXXXXXXXX
+
+Input : Net 189 s-a-0
+Generated Test Vector : X00110X1XXXXXXXXX
+
+Input : Net 189 s-a-1
+Generated Test Vector : X00010XXXXXXXXXXX
+
+Input : Net 190 s-a-0
+Generated Test Vector : X00000XXXXXXXXXXX
+
+Input : Net 190 s-a-1
+Generated Test Vector : X00010XXXXXXXXXXX
+
+Input : Net 191 s-a-0
+Generated Test Vector : X10101XXXXXX0XXXX
+
+Input : Net 191 s-a-1
+Generated Test Vector : X10101XXXXXX1XXXX
+
+Input : Net 192 s-a-0
+Generated Test Vector : X10101XXXXXX0XXXX
+
+Input : Net 192 s-a-1
+Generated Test Vector : X11101XXXXXX0XXXX
+
+Input : Net 193 s-a-0
+Generated Test Vector : X10101XXXXXX0X0XX
+
+Input : Net 193 s-a-1
+Generated Test Vector : X10101XXXXXX1X0XX
+
+Input : Net 194 s-a-0
+Generated Test Vector : X10101XXXXXX0X0XX
+
+Input : Net 194 s-a-1
+Generated Test Vector : X11101XXXXXX0X0XX
+
+Input : Net 195 s-a-0
+Generated Test Vector : 00010XXXXXXXX00XX
+
+Input : Net 195 s-a-1
+Generated Test Vector : 10010XXXXXXXX00XX
+
+Input : Net 196 s-a-0
+Generated Test Vector : 11010XXXXXXXX00XX
+
+Input : Net 196 s-a-1
+Generated Test Vector : 10010XXXXXXXX00XX
+
+Input : Net 197 s-a-0
+Generated Test Vector : 10110XXXXXXXX00XX
+
+Input : Net 197 s-a-1
+Generated Test Vector : 10010XXXXXXXX00XX
+
+Input : Net 198 s-a-0
+Generated Test Vector : 10000XXXXXXXX00XX
+
+Input : Net 198 s-a-1
+Generated Test Vector : 10010XXXXXXXX00XX
+
+Input : Net 199 s-a-0
+Generated Test Vector : 0001XXXXXXXXXX0XX
+
+Input : Net 199 s-a-1
+Generated Test Vector : 1001XXXXXXXXXX0XX
+
+Input : Net 200 s-a-0
+Generated Test Vector : 1101XXXXXXXXXX0XX
+
+Input : Net 200 s-a-1
+Generated Test Vector : 1001XXXXXXXXXX0XX
+
+Input : Net 201 s-a-0
+Generated Test Vector : 1010XXXXXXXXXX0XX
+
+Input : Net 201 s-a-1
+Generated Test Vector : 1110XXXXXXXXXX0XX
+
+Input : Net 202 s-a-0
+Generated Test Vector : 1001XXXXXXXXXX0XX
+
+Input : Net 202 s-a-1
+Generated Test Vector : 1011XXXXXXXXXX0XX
+
+Input : Net 1 s-a-0
+Generated Test Vector : 1XXXXXXXXXXXXX0XX
+
+Input : Net 1 s-a-1
+Generated Test Vector : 0XXXXXXXXXXXXX0XX
+
+Input : Net 2 s-a-0
+Generated Test Vector : 11X0XXXXXXXXXX0XX
+
+Input : Net 2 s-a-1
+Generated Test Vector : 10X0XXXXXXXXXX0XX
+
+Input : Net 3 s-a-0
+Generated Test Vector : X11010XX0XXXXXXXX
+
+Input : Net 3 s-a-1
+Generated Test Vector : X10010XX0XXXXXXXX
+
+Input : Net 4 s-a-0
+Generated Test Vector : 0XX1XXXXXXXXXX0XX
+
+Input : Net 4 s-a-1
+Generated Test Vector : 0XX0XXXXXXXXXX0XX
+
+Input : Net 5 s-a-0
+Generated Test Vector : X11010XXXXX0XXXXX
+
+Input : Net 5 s-a-1
+Generated Test Vector : X11000XXXXX0XXXXX
+
+Input : Net 6 s-a-0
+Generated Test Vector : X11XX1XXXXXXXX0XX
+
+Input : Net 6 s-a-1
+Generated Test Vector : X11XX0XXXXXXXX0XX
+
+Input : Net 7 s-a-0
+Generated Test Vector : XXXXXX1XXXXXXXXXX
+
+Input : Net 7 s-a-1
+Generated Test Vector : XXXXXX0XXXXXXXXXX
+
+Input : Net 8 s-a-0
+Generated Test Vector : XXXXXXX1XXXXXXXXX
+
+Input : Net 8 s-a-1
+Generated Test Vector : XXXXXXX0XXXXXXXXX
+
+Input : Net 9 s-a-0
+Generated Test Vector : XXXXXXXX1XXXXXXXX
+
+Input : Net 9 s-a-1
+Generated Test Vector : XXXXXXXX0XXXXXXXX
+
+Input : Net 10 s-a-0
+Generated Test Vector : XXXXXXXXX1XXXXXXX
+
+Input : Net 10 s-a-1
+Generated Test Vector : XXXXXXXXX0XXXXXXX
+
+Input : Net 11 s-a-0
+Generated Test Vector : XXXXXXXXXX1XXXXXX
+
+Input : Net 11 s-a-1
+Generated Test Vector : XXXXXXXXXX0XXXXXX
+
+Input : Net 12 s-a-0
+Generated Test Vector : XXXXXXXXXXX1XXXXX
+
+Input : Net 12 s-a-1
+Generated Test Vector : XXXXXXXXXXX0XXXXX
+
+Input : Net 13 s-a-0
+Generated Test Vector : X10101XXXXXX1XXXX
+
+Input : Net 13 s-a-1
+Generated Test Vector : X10101XXXXXX0XXXX
+
+Input : Net 14 s-a-0
+Generated Test Vector : XX1X0XXXXXXXX10XX
+
+Input : Net 14 s-a-1
+Generated Test Vector : XX1X0XXXXXXXX00XX
+
+Input : Net 15 s-a-0
+Generated Test Vector : 0XXXXXXXXXXXXX1XX
+
+Input : Net 15 s-a-1
+Generated Test Vector : 0XXXXXXXXXXXXX0XX
+
+Input : Net 16 s-a-0
+Generated Test Vector : XXXXXXXXXXXXX001X
+
+Input : Net 16 s-a-1
+Generated Test Vector : XXXXXXXXXXXXX000X
+
+Input : Net 17 s-a-0
+Generated Test Vector : XXXXXXXXXXXX0X0X1
+
+Input : Net 17 s-a-1
+Generated Test Vector : XXXXXXXXXXXX0X0X0
+
 

@@ -138,4 +138,15 @@ void CircuitParser::parseFile()
       parseGate(line);
     }
   }
+  std::ofstream out(inputFile_ + "_all_tests.txt");
+  for (auto& gate: gates_)
+  {
+    out << "Net " << gate.second.output << " s-a-0"<< std::endl;
+    out << "Net " << gate.second.output << " s-a-1"<< std::endl;
+  }
+  for (auto& gate: getPrimaryInputs())
+  {
+    out << "Net " << gate << " s-a-0"<< std::endl;
+    out << "Net " << gate << " s-a-1"<< std::endl;
+  }
 }

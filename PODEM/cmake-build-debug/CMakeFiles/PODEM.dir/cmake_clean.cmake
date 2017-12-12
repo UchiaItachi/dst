@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/PODEM.dir/main.cpp.o"
-  "CMakeFiles/PODEM.dir/DeductiveFaultSimulator.cpp.o"
+  "CMakeFiles/PODEM.dir/FaultSimulator.cpp.o"
   "CMakeFiles/PODEM.dir/CircuitParser.cpp.o"
   "CMakeFiles/PODEM.dir/TestParser.cpp.o"
   "CMakeFiles/PODEM.dir/GateBase.cpp.o"

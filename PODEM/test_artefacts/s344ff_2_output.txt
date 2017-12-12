@@ -1,5 +1,5 @@
-Netlist File : /home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/PODEM/test_artefacts/s344f_2.txt
-Test Input File : /home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/PODEM/test_artefacts/s344f_2_input.txt
+Netlist File : /home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/PODEM/test_artefacts/s344ff_2.txt
+Test Input File : /home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/PODEM/test_artefacts/s344ff_2_input.txt
 
 Input : Net 25 s-a-0
 Generated Test Vector : 10XXXXXXXXXXXXX0XXXXXXXX
@@ -152,10 +152,10 @@ Input : Net 49 s-a-1
 Generated Test Vector : 0XXXXXXXXXXXXXXXXXXXXXXX
 
 Input : Net 50 s-a-0
-Generated Test Vector : 101XXXXXXXXXXXXXXXXXXXXX
+Generated Test Vector : Undetectable Fault
 
 Input : Net 50 s-a-1
-Generated Test Vector : 0XXXXXXXXXXXXXXXXXXXXXXX
+Generated Test Vector : Undetectable Fault
 
 Input : Net 51 s-a-0
 Generated Test Vector : 00XXXXXXXXXXXXX0XXXXXXXX
@@ -287,7 +287,7 @@ Input : Net 72 s-a-0
 Generated Test Vector : 111XXXXXXXXXXXXXXXXXXXXX
 
 Input : Net 72 s-a-1
-Generated Test Vector : 10XXXXXXXXXXXXXXXXXXXXXX
+Generated Test Vector : 101XXXXXXXXXXXXXXXXXXXXX
 
 Input : Net 73 s-a-0
 Generated Test Vector : 000XXX1XXX0XXX1XXXX0XXXX
@@ -308,22 +308,22 @@ Input : Net 75 s-a-1
 Generated Test Vector : 100XXX1XXX0XXX1XXXX0XXXX
 
 Input : Net 76 s-a-0
-Generated Test Vector : 0XXXXXXXXXXXXXXXXXXXXXXX
+Generated Test Vector : 0X1XXXXXXXXXXXX0XXXXXXXX
 
 Input : Net 76 s-a-1
-Generated Test Vector : 101XXXXXXXXXXXXXXXXXXXXX
+Generated Test Vector : 101XXXXXXXXXXXX0XXXXXXXX
 
 Input : Net 77 s-a-0
-Generated Test Vector : 001XXXXXXXXXXXXXXXXXXXXX
+Generated Test Vector : 001XXXXXXXXXXXX0XXXXXXXX
 
 Input : Net 77 s-a-1
-Generated Test Vector : 101XXXXXXXXXXXXXXXXXXXXX
+Generated Test Vector : 101XXXXXXXXXXXX0XXXXXXXX
 
 Input : Net 78 s-a-0
-Generated Test Vector : 11XXXXXXXXXXXXXXXXXXXXXX
+Generated Test Vector : 111XXXXXXXXXXXX0XXXXXXXX
 
 Input : Net 78 s-a-1
-Generated Test Vector : 101XXXXXXXXXXXXXXXXXXXXX
+Generated Test Vector : 101XXXXXXXXXXXX0XXXXXXXX
 
 Input : Net 79 s-a-0
 Generated Test Vector : 01XXXX0XXX1XXXXXXXXXXXXX
@@ -398,7 +398,7 @@ Input : Net 90 s-a-1
 Generated Test Vector : 01X01XXXXX010XX0XXXXXXXX
 
 Input : Net 91 s-a-0
-Generated Test Vector : 10XXXXXXXXXXXXXXXXXXXXXX
+Generated Test Vector : 10XXXXXXXXXXXXX0XXXXXXXX
 
 Input : Net 91 s-a-1
 Generated Test Vector : 111XXXXXXXXXXXXXXXXXXXXX
@@ -980,22 +980,34 @@ Input : Net 187 s-a-1
 Generated Test Vector : 01X1XXXXXX1XXXX0XXXXXXXX
 
 Input : Net 188 s-a-0
-Generated Test Vector : 11XXXXXXXXXXXXXXXXXXXXXX
+Generated Test Vector : 111XXXXXXXXXXXX0XXXXXXXX
 
 Input : Net 188 s-a-1
-Generated Test Vector : 101XXXXXXXXXXXXXXXXXXXXX
+Generated Test Vector : 101XXXXXXXXXXXX0XXXXXXXX
 
 Input : Net 189 s-a-0
-Generated Test Vector : 111XXXXXXXXXXXXXXXXXXXXX
+Generated Test Vector : 111XXXXXXXXXXXX0XXXXXXXX
 
 Input : Net 189 s-a-1
-Generated Test Vector : 101XXXXXXXXXXXXXXXXXXXXX
+Generated Test Vector : 101XXXXXXXXXXXX0XXXXXXXX
 
 Input : Net 190 s-a-0
-Generated Test Vector : 100XXXXXXXXXXXXXXXXXXXXX
+Generated Test Vector : 100XXX11XX0XXX1XXXX0XXXX
 
 Input : Net 190 s-a-1
-Generated Test Vector : 101XXXXXXXXXXXXXXXXXXXXX
+Generated Test Vector : 101XXXXXXXXXXXX0XXXXXXXX
+
+Input : Net 191 s-a-0
+Generated Test Vector : Undetectable Fault
+
+Input : Net 191 s-a-1
+Generated Test Vector : 0XXXXXXXXXXXXXXXXXXXXXXX
+
+Input : Net 192 s-a-0
+Generated Test Vector : 111XXXXXXXXXXXXXXXXXXXXX
+
+Input : Net 192 s-a-1
+Generated Test Vector : 0XXXXXXXXXXXXXXXXXXXXXXX
 
 Input : Net 1 s-a-0
 Generated Test Vector : 111XXXXXXXXXXXXXXXXXXXXX

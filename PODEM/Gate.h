@@ -22,7 +22,7 @@ public:
   virtual bool isAtPrimaryInput() const = 0;
 
   virtual ParsedGateInfo& getInfo() = 0;
-
+  virtual PrimaryNodeList_t getPrimaryInputsOfGate() = 0;
   virtual void setInput1Gate(Gate* gate) = 0;
   virtual void setInput2Gate(Gate* gate) = 0;
 

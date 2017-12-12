@@ -10,14 +10,14 @@
 
 class Gate;
 
-class DeductiveFaultSimulator
+class FaultSimulator
 {
 public:
-  DeductiveFaultSimulator();
-  ~DeductiveFaultSimulator();
+  FaultSimulator();
+  ~FaultSimulator();
 
-  DeductiveFaultSimulator(const DeductiveFaultSimulator&) = delete;
-  DeductiveFaultSimulator& operator =(const DeductiveFaultSimulator&) = delete;
+  FaultSimulator(const FaultSimulator&) = delete;
+  FaultSimulator& operator =(const FaultSimulator&) = delete;
 
   void addGate(const ParsedGateInfo_t& gateInfo);
   void addPrimaryInputs(const PrimaryNodeList_t& inputs);
@@ -49,6 +49,7 @@ private:
   GateInfoMap_t gates_;
   ParsedGateInfo_t gateInfo_;
 
+  PrimaryNodeList_t getPrimaryInputsForObjective(NodeId_t objective);
   PrimaryNodeList_t inputs_;
   PrimaryNodeList_t outputs_;
 

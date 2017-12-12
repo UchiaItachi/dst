@@ -29,7 +29,7 @@ public:
   void setInput2Value(BooleanValue value) override;
 
   ParsedGateInfo& getInfo() override;
-
+  PrimaryNodeList_t getPrimaryInputsOfGate() override;
   void reset() override;
 
   bool getControllingValue() override;

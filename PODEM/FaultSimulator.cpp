@@ -1,11 +1,11 @@
-#include "DeductiveFaultSimulator.h"
+#include "FaultSimulator.h"
 #include "BasicGates.h"
 #include "Podem.h"
 
 #include <sstream>
 #include <algorithm>
 
-DeductiveFaultSimulator::DeductiveFaultSimulator()
+FaultSimulator::FaultSimulator()
   : gates_()
   , gateInfo_()
   , inputs_()
@@ -14,7 +14,7 @@ DeductiveFaultSimulator::DeductiveFaultSimulator()
 {
 }
 
-DeductiveFaultSimulator::~DeductiveFaultSimulator()
+FaultSimulator::~FaultSimulator()
 {
   for (auto& gi: gates_)
   {
@@ -25,7 +25,7 @@ DeductiveFaultSimulator::~DeductiveFaultSimulator()
   outputs_.clear();
 }
 
-void DeductiveFaultSimulator::reset()
+void FaultSimulator::reset()
 {
   for (auto& gi: gates_)
   {
@@ -36,7 +36,7 @@ void DeductiveFaultSimulator::reset()
   podem_.reset();
 }
 
-void DeductiveFaultSimulator::addGate(const ParsedGateInfo_t& gateInfo)
+void FaultSimulator::addGate(const ParsedGateInfo_t& gateInfo)
 {
   gateInfo_ = gateInfo;
   for (auto& gate: gateInfo_)
@@ -46,17 +46,17 @@ void DeductiveFaultSimulator::addGate(const ParsedGateInfo_t& gateInfo)
   buildCircuit(gates_, gateInfo_);
 }
 
-void DeductiveFaultSimulator::addPrimaryInputs(const PrimaryNodeList_t& inputs)
+void FaultSimulator::addPrimaryInputs(const PrimaryNodeList_t& inputs)
 {
   inputs_ = inputs;
 }
 
-void DeductiveFaultSimulator::addPrimaryOutputs(const PrimaryNodeList_t& outputs)
+void FaultSimulator::addPrimaryOutputs(const PrimaryNodeList_t& outputs)
 {
   outputs_ = outputs;
 }
 
-void DeductiveFaultSimulator::buildCircuit(GateInfoMap_t& gates, ParsedGateInfo_t& gateInfo)
+void FaultSimulator::buildCircuit(GateInfoMap_t& gates, ParsedGateInfo_t& gateInfo)
 {
   if (outputs_.empty())
   {
@@ -71,22 +71,22 @@ void DeductiveFaultSimulator::buildCircuit(GateInfoMap_t& gates, ParsedGateInfo_
   }
 }
 
-bool DeductiveFaultSimulator::isInputFannedIn(NodeId_t input)
+bool FaultSimulator::isInputFannedIn(NodeId_t input)
 {
   return gates_.find(input) != gates_.end();
 }
 
-bool DeductiveFaultSimulator::isGate(NodeId_t node)
+bool FaultSimulator::isGate(NodeId_t node)
 {
   return isInputFannedIn(node);
 }
 
-Gate* DeductiveFaultSimulator::getGate(NodeId_t node)
+Gate* FaultSimulator::getGate(NodeId_t node)
 {
   return getFanInGate(node);
 }
 
-Gate* DeductiveFaultSimulator::getFanInGate(NodeId_t input)
+Gate* FaultSimulator::getFanInGate(NodeId_t input)
 {
   if (isInputFannedIn(input))
   {
@@ -95,13 +95,13 @@ Gate* DeductiveFaultSimulator::getFanInGate(NodeId_t input)
   return nullptr;
 }
 
-bool DeductiveFaultSimulator::isPrimaryOutput(NodeId_t node)
+bool FaultSimulator::isPrimaryOutput(NodeId_t node)
 {
   auto it = std::find(outputs_.begin(), outputs_.end(), node);
   return it != outputs_.end();
 }
 
-void DeductiveFaultSimulator::propagateConnection(Gate* gate)
+void FaultSimulator::propagateConnection(Gate* gate)
 {
   ParsedGateInfo& gi = gate->getInfo();
 
@@ -130,7 +130,7 @@ void DeductiveFaultSimulator::propagateConnection(Gate* gate)
   }
 }
 
-std::string DeductiveFaultSimulator::orchestratePodem(NodeId_t faultyNode, bool stuckAtValue)
+std::string FaultSimulator::orchestratePodem(NodeId_t faultyNode, bool stuckAtValue)
 {
   std::string circuitOutput = "";
   assignPrimaryInputs();
@@ -156,11 +156,13 @@ std::string DeductiveFaultSimulator::orchestratePodem(NodeId_t faultyNode, bool 
   else
   {
     circuitOutput = "Undetectable Fault";
+    std::cout << "Undetectable Fault " << faultyNode << "s-a-"<< stuckAtValue << std::endl;
   }
+
   return circuitOutput;
 }
 
-void DeductiveFaultSimulator::assignPrimaryInputs()
+void FaultSimulator::assignPrimaryInputs()
 {
   for (auto& inputNode: inputs_)
   {
@@ -183,7 +185,7 @@ void DeductiveFaultSimulator::assignPrimaryInputs()
   }
 }
 
-DeductiveFaultSimulator::GateList_t DeductiveFaultSimulator::getGatesWithPrimaryInputNode(NodeId_t inputNode)
+FaultSimulator::GateList_t FaultSimulator::getGatesWithPrimaryInputNode(NodeId_t inputNode)
 {
   GateList_t gates;
   for (auto& g: gates_)
@@ -202,7 +204,7 @@ DeductiveFaultSimulator::GateList_t DeductiveFaultSimulator::getGatesWithPrimary
   return gates;
 }
 
-Gate* DeductiveFaultSimulator::getGate(const ParsedGateInfo& gi)
+Gate* FaultSimulator::getGate(const ParsedGateInfo& gi)
 {
   Gate *gate = nullptr;
 
@@ -263,7 +265,7 @@ Gate* DeductiveFaultSimulator::getGate(const ParsedGateInfo& gi)
   return gate;
 }
 
-void DeductiveFaultSimulator::evaluateDFrontier()
+void FaultSimulator::evaluateDFrontier()
 {
   dFrontierGates_.clear();
   for (auto& gate: gates_)
@@ -273,9 +275,13 @@ void DeductiveFaultSimulator::evaluateDFrontier()
       dFrontierGates_.push_back(gate.second);
     }
   }
+  if (dFrontierGates_.empty())
+  {
+    //std::cout << "Empty D frontier. .... " << std::endl;
+  }
 }
 
-std::string DeductiveFaultSimulator::getTestVector(NodeId_t faultyNode)
+std::string FaultSimulator::getTestVector(NodeId_t faultyNode)
 {
   std::string testVector = "";
 
@@ -319,4 +325,19 @@ std::string DeductiveFaultSimulator::getTestVector(NodeId_t faultyNode)
     }
   }
   return testVector;
+}
+
+PrimaryNodeList_t FaultSimulator::getPrimaryInputsForObjective(NodeId_t objective)
+{
+  PrimaryNodeList_t gl;
+  if (isGate(objective))
+  {
+    Gate *gate = getGate(objective);
+    gl = gate->getPrimaryInputsOfGate();
+  }
+  else
+  {
+    gl.push_back(objective);
+  }
+  return gl;
 }

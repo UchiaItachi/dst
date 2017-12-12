@@ -56,9 +56,9 @@ regex
 random
 -
 
-/home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/PODEM/DeductiveFaultSimulator.cpp
-DeductiveFaultSimulator.h
-/home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/PODEM/DeductiveFaultSimulator.h
+/home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/PODEM/FaultSimulator.cpp
+FaultSimulator.h
+/home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/PODEM/FaultSimulator.h
 BasicGates.h
 /home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/PODEM/BasicGates.h
 Podem.h
@@ -68,7 +68,7 @@ sstream
 algorithm
 -
 
-/home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/PODEM/DeductiveFaultSimulator.h
+/home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/PODEM/FaultSimulator.h
 GateType.h
 /home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/PODEM/GateType.h
 GateBase.h
@@ -127,8 +127,8 @@ map
 /home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/PODEM/Podem.cpp
 Podem.h
 /home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/PODEM/Podem.h
-DeductiveFaultSimulator.h
-/home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/PODEM/DeductiveFaultSimulator.h
+FaultSimulator.h
+/home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/PODEM/FaultSimulator.h
 algorithm
 -
 
@@ -140,6 +140,8 @@ map
 tuple
 -
 vector
+-
+algorithm
 -
 
 /home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/PODEM/SimulatorDefines.h
@@ -181,8 +183,8 @@ iostream
 -
 CircuitParser.h
 /home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/PODEM/CircuitParser.h
-DeductiveFaultSimulator.h
-/home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/PODEM/DeductiveFaultSimulator.h
+FaultSimulator.h
+/home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/PODEM/FaultSimulator.h
 TestParserInfo.h
 /home/itachi/repositories/gatech/fall_2017/ece6140_dst/github/dst/PODEM/TestParserInfo.h
 TestParser.h

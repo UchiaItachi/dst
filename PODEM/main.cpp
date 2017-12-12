@@ -1,7 +1,7 @@
 #include <iostream>
 
 #include "CircuitParser.h"
-#include "DeductiveFaultSimulator.h"
+#include "FaultSimulator.h"
 #include "TestParserInfo.h"
 
 #include "TestParser.h"
@@ -22,7 +22,7 @@ int main(int argc, char* argv[])
   {
     TestVectors_t& testVectors = circuitInfo.vectors_;
     CircuitParser parser(circuitInfo.circuitFile);
-    DeductiveFaultSimulator simulator;
+    FaultSimulator simulator;
 
     simulator.addPrimaryInputs(parser.getPrimaryInputs());
     simulator.addPrimaryOutputs(parser.getPrimaryOutputs());

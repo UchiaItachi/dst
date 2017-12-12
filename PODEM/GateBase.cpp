@@ -235,3 +235,31 @@ std::vector<Gate*>& GateBase::getOutputFanoutGates()
 {
   return outputFanOut_;
 }
+
+PrimaryNodeList_t GateBase::getPrimaryInputsOfGate()
+{
+  PrimaryNodeList_t gl;
+  if (input1Gate_)
+  {
+    PrimaryNodeList_t gl1 = input1Gate_->getPrimaryInputsOfGate();
+    gl.insert(gl.begin(), gl1.begin(), gl1.end());
+  }
+  else
+  {
+    gl.push_back(gateInfo_.input1);
+  }
+
+  if (input2Gate_)
+  {
+    PrimaryNodeList_t gl1 = input2Gate_->getPrimaryInputsOfGate();
+    gl.insert(gl.begin(), gl1.begin(), gl1.end());
+  }
+  else
+  {
+    if( (gateInfo_.gateType != GateType::NOT) && (gateInfo_.gateType != GateType::BUFF))
+    {
+      gl.push_back(gateInfo_.input2);
+    }
+  }
+  return gl;
+}
